@@ -1,0 +1,19 @@
+.borderTest {
+    border: 2px solid black !important;
+}
+
+.borderLight {
+    border: 1px solid #e6c0c0 !important;
+}
+.allChildrenCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inheritHeight {
+    height: inherit;
+}
+
+section {
+    margin-bottom: 40px;
+}
