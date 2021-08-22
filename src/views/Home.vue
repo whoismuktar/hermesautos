@@ -53,7 +53,7 @@
         </v-row>
       </section>
 
-      <section class="lightBG testimonial">
+      <section class="lightBG testimonial mt-0 py-12">
         <v-row align="center">
           <v-col cols="6" class="inheritHeight">
             <v-card tile flat height="inherit" class="d-flex allChildrenCenter pa-9">
@@ -63,7 +63,9 @@
             </v-card>
           </v-col>
 
-          <v-col cols="6" class="inheritHeight testimonialBG"></v-col>
+          <v-col cols="6" class="inheritHeight">
+            <div class="inheritHeight testimonialBG"></div>
+          </v-col>
         </v-row>
       </section>
 
@@ -81,16 +83,28 @@
           <v-img :src="require('../assets/img/video.jpeg')" height="600"></v-img>
         </div>
       </section>
+
+      <!-- Featured Reviews -->
+      <section class="lightBG">
+        <featured-reviews />
+      </section>
+
+      <!-- Popular Brands -->
+      <section>
+        <car-logos />
+      </section>
   </div>
 </template>
 
 <script>
-// import HelloWorld from '@/components/HelloWorld.vue'
+import featuredReviews from '@/components/featuredReviews.vue'
+import carLogos from '@/components/carLogos.vue'
 
 export default {
   name: 'Home',
   components: {
-    // HelloWorld
+    featuredReviews,
+    carLogos
   },
   data(){return {
     iframeLink: "https://hermesautos.com/?page_id=8235?car_year=2015&cars_pp=16&cars_orderby=date&cars_order=desc&lay_style=view-grid-full&cars_grid=yes&current_value=2015&current_attr=car_year",
