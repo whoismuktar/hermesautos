@@ -2,15 +2,18 @@
   <v-app id="app">
     <nav-bar />
     <router-view/>
+    <app-footer />
   </v-app>
 </template>
 
 <script>
 import navBar from "@/components/navBar";
+import appFooter from "@/components/footer";
 
 export default {
   components: {
-    navBar
+    navBar,
+    appFooter
   }
 }
 </script>
