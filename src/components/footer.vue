@@ -1,5 +1,5 @@
 <template>
-  <div class="footer">
+  <div class="footer black">
       <div class="upper-footer">
           <h2 class="relative">Who We Are</h2>
           <p class="relative">
@@ -8,27 +8,141 @@
 
           <v-btn depressed color="primary">Learn More</v-btn>
       </div>
-      <div class="lower-footer">
-          <v-row>
-              <v-col cols="4">
-                <v-img contain :src="require('../assets/logo.png')" class="car-holder" width="170" position="left"></v-img>
+      <div class="lower-footer py-12">
+          <v-container class="app-max-width">
+              <v-row class="mb-0">
+                <v-col cols="4" class="pb-0">
+                    <v-img contain :src="require('../assets/logo.png')" class="car-holder" width="170" position="left"></v-img>
 
-                <!-- Social -->
-                <div class="d-flex">
-                    <v-icon>add</v-icon>
-                </div>
-              </v-col>
-              <v-col cols="2"></v-col>
-              <v-col cols="2"></v-col>
-              <v-col cols="2"></v-col>
-          </v-row>
+                    <!-- Social -->
+                    <div class="mt-4 ml-3">
+                        <social-icons />
+                    </div>
+                </v-col>
+                <v-col cols="2" class="pb-0">
+                    <div>
+                        <ul>
+                            <li v-for="(menu1, index) in menu1" :key="index">
+                                <a :href="menu1.path">
+                                    {{ menu1.title }}
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </v-col>
+                <v-col cols="2" class="pb-0">
+                    <div>
+                        <ul>
+                            <li v-for="(menu2, index) in menu2" :key="index">
+                                <a :href="menu2.path">
+                                    {{ menu2.title }}
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </v-col>
+
+                <v-col cols="2" class="pb-0">
+                    <div>
+                        <ul>
+                            <li v-for="(menu3, index) in menu3" :key="index">
+                                <a :href="menu3.path">
+                                    {{ menu3.title }}
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </v-col>
+
+                <v-col cols="2" class="pb-0">
+                    <div>
+                        <ul>
+                            <li v-for="(menu4, index) in menu4" :key="index">
+                                <a :href="menu4.path">
+                                    {{ menu4.title }}
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </v-col>
+            </v-row>
+          </v-container>
       </div>
   </div>
 </template>
 
 <script>
+import socialIcons from "@/components/socialIcons"
+
 export default {
-    name: "appFooter"
+    name: "appFooter",
+    components: {
+        socialIcons
+    },
+    data() {
+        return {
+            menu1: [
+                {
+                    title: "buy",
+                    path: "/buy",
+                },
+                {
+                    title: "sell/trade",
+                    path: "/sell-trade",
+                },
+                {
+                    title: "finance",
+                    path: "/finance",
+                }
+            ],
+            menu2: [
+                {
+                    title: "about us",
+                    path: "/about",
+                },
+                {
+                    title: "hermes protection",
+                    path: "/how-it-works",
+                },
+                {
+                    title: "investor relations",
+                    path: "/investor-relation",
+                },
+                {
+                    title: "CSR",
+                    path: "/csr",
+                }
+            ],
+            menu3: [
+                {
+                    title: "+123456789",
+                    path: "tel:123456789",
+                },
+                {
+                    title: "faq",
+                    path: "faq",
+                },
+                {
+                    title: "caontact us",
+                    path: "contact",
+                }
+            ],
+            menu4: [
+                {
+                    title: "privacy policy",
+                    path: "/privacy-policy",
+                },
+                {
+                    title: "careers",
+                    path: "/careers",
+                },
+                {
+                    title: "do not sell my info",
+                    path: "/do-not-sell-my-info",
+                }
+            ],
+        }
+    }
 }
 </script>
 
@@ -51,4 +165,14 @@ export default {
         height: 100%;
         background-color: rgba(0,0,0,0.5)
     }
+
+ul li {
+    list-style: none;
+    text-transform: capitalize;
+    line-height: 2;
+    font-weight: 500;
+}
+ul li a {
+    color: #ffffff;
+}
 </style>
