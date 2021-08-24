@@ -34,64 +34,76 @@
       </div>
 
       <section>
-        <iframe :src="iframeLink" frameborder="0" height="300" width="100%"></iframe>
+        <v-container>
+          <iframe :src="iframeLink" frameborder="0" height="300" width="100%"></iframe>
+        </v-container>
       </section>
 
       <section class="values lightBG">
-        <h1>Hermes Autos Values</h1>
-        <div class="mb-7">We believe buying a car should be fun, easy, and affordable. Here’s how Vroom is leading the revolution</div>
+        <v-container>
+          <h1>Hermes Autos Values</h1>
+          <div class="mb-7">We believe buying a car should be fun, easy, and affordable. Here’s how Vroom is leading the revolution</div>
 
-        <v-row>
-          <v-col cols="6" v-for="(value, index) in values" :key="index">
-            <v-card flat class="pa-10 borderLight value">
-              <h5 class="text-uppercase grey--text mb-2">{{ value.attr }}</h5>
-              <h4>{{ value.attr }}</h4>
+          <v-row>
+            <v-col cols="6" v-for="(value, index) in values" :key="index">
+              <v-card flat class="pa-10 borderLight value">
+                <h5 class="text-uppercase grey--text mb-2">{{ value.attr }}</h5>
+                <h4>{{ value.attr }}</h4>
 
-              <div>{{ value.content }}</div>
-            </v-card>
-          </v-col>
-        </v-row>
+                <div>{{ value.content }}</div>
+              </v-card>
+            </v-col>
+          </v-row>
+        </v-container>
       </section>
 
       <section class="lightBG testimonial mt-0 py-12">
-        <v-row align="center">
-          <v-col cols="6" class="inheritHeight">
-            <v-card tile flat height="inherit" class="d-flex allChildrenCenter pa-9">
-              <v-card-text>
-                “Vroom is a fast, easy and hassle free way of buying a vehicle. I can honestly say that I had an unbelievable buying experience.”
-              </v-card-text>
-            </v-card>
-          </v-col>
+        <v-container>
+          <v-row align="center">
+            <v-col cols="6" class="inheritHeight">
+              <v-card tile flat height="inherit" class="d-flex allChildrenCenter pa-9">
+                <v-card-text>
+                  “Vroom is a fast, easy and hassle free way of buying a vehicle. I can honestly say that I had an unbelievable buying experience.”
+                </v-card-text>
+              </v-card>
+            </v-col>
 
-          <v-col cols="6" class="inheritHeight">
-            <div class="inheritHeight testimonialBG"></div>
-          </v-col>
-        </v-row>
+            <v-col cols="6" class="inheritHeight">
+              <div class="inheritHeight testimonialBG"></div>
+            </v-col>
+          </v-row>
+        </v-container>
       </section>
 
       <section>
-        <div class="text-center">
-          <h1>How It Works</h1>
-          <div>Hermes Autos is changing the way people buy, sell, and trade in cars. Here’s a step-by-step guide on what to expect</div>
+        <v-container>
+          <div class="text-center">
+            <h1>How It Works</h1>
+            <div>Hermes Autos is changing the way people buy, sell, and trade in cars. Here’s a step-by-step guide on what to expect</div>
 
-          <router-link to="/about" class="text-capitalize">
-            <b>LEARN MORE ABOUT Hermes Autos</b>
-          </router-link>
-        </div>
+            <router-link to="/about" class="text-capitalize">
+              <b>LEARN MORE ABOUT Hermes Autos</b>
+            </router-link>
+          </div>
 
-        <div class="my-5">
-          <v-img :src="require('../assets/img/video.jpeg')" height="600"></v-img>
-        </div>
+          <div class="my-5">
+            <v-img :src="require('../assets/img/video.jpeg')" height="600"></v-img>
+          </div>
+        </v-container>
       </section>
 
       <!-- Featured Reviews -->
       <section class="lightBG">
-        <featured-reviews />
+        <v-container>
+          <featured-reviews />
+        </v-container>
       </section>
 
       <!-- Popular Brands -->
       <section>
-        <car-logos />
+        <v-container>
+          <car-logos />
+        </v-container>
       </section>
   </div>
 </template>
