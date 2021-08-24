@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+.app-font {
+    font-family: 'Righteous';
+}
+.font-x2b {
+    @extend .app-font;
+    font-size: 3em;
+}
+.font-x5 {
+    font-size: 1.2em;
+}
 .borderTest {
     border: 2px solid black !important;
 }
@@ -21,7 +33,7 @@
 }
 
 section {
-    margin-top: 40px;
+    padding-top: 40px;
 }
 .cursorMe {
     cursor: pointer;
