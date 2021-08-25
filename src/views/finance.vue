@@ -2,56 +2,7 @@
   <div class="finance">
     <page-hero :carImg="hero.carImg" :intro="hero.intro" :title="hero.title" :subtitle="hero.subtitle" :cta="hero.cta" :ctaAction="hero.ctaAction" />
     <section class="lightBG">
-      <div>
-        <template>
-          <v-carousel v-model="model" height="150" hide-delimiter-background hide-delimiters>
-            <template v-slot:prev="{ on, attrs }">
-              <v-btn
-                :ripple="false"
-                plain
-                color="primary"
-                v-bind="attrs"
-                v-on="on"
-              >
-                <v-icon size="50">arrow_back_ios</v-icon>
-              </v-btn>
-            </template>
-            <template v-slot:next="{ on, attrs }">
-              <v-btn
-                :ripple="false"
-                plain
-                color="primary"
-                v-bind="attrs"
-                v-on="on"
-              >
-                <v-icon size="50">arrow_forward_ios</v-icon>
-              </v-btn>
-            </template>
-            <v-carousel-item
-              v-for="(review, index) in financeReview"
-              :key="index"
-            >
-
-              <v-sheet
-                color="transparent"
-                height="100%"
-                tile
-                class="d-flex flex-column justify-center align-center"
-              >
-                  <div>
-                    {{ review.content }}
-                  </div>
-                  <div>
-                    <em class="d-flex">
-                      <h4>{{ review.author }}</h4>
-                      <span class="ml-2">{{ new Date(review.date).toDateString() }}</span>
-                    </em>
-                  </div>
-              </v-sheet>
-            </v-carousel-item>
-          </v-carousel>
-        </template>
-      </div>
+      <review-carousel :reviews="financeReview" />
     </section>
 
     <section class="py-12">
@@ -123,12 +74,14 @@
 <script>
 import tabView from '../components/tabView'
 import footerQuestion from '../components/footerQuestion'
-import pageHero from '../components/pageHero.vue'
+import pageHero from '../components/pageHero'
+import reviewCarousel from '../components/reviewCarousel'
   export default {
   components: { 
     tabView,
     footerQuestion,
     pageHero,
+    reviewCarousel,
   },
     data: () => ({
       hero: {
@@ -197,10 +150,6 @@ import pageHero from '../components/pageHero.vue'
   background-size: 15% 100%, 85% 100%;
   background-position: 100% 0%, 0% 0%;
   position: relative;
-}
->>>.v-window__prev,
->>>.v-window__next {
- background: transparent; 
 }
 ol {
   counter-reset: my-awesome-counter;
