@@ -10,7 +10,8 @@
                 <h2 class="font-x2b">{{ title }}</h2>
                 <div class="font-x5">{{ subtitle }}</div>
 
-                <v-btn depressed color="primary" class="mt-4">{{ cta }}</v-btn>
+                <vin-card v-if="vinCard" />
+                <v-btn v-if="cta" depressed color="primary" class="mt-4">{{ cta }}</v-btn>
               </div>
             </div>
           </v-col>
@@ -28,7 +29,11 @@
 </template>
 
 <script>
+import vinCard from '../components/vinCard.vue'
 export default {
+    components: {
+        vinCard
+    },
     props: {
         carImg: {
             type: String,
@@ -47,6 +52,9 @@ export default {
         },
         ctaAction: {
             type: String,
+        },
+        vinCard: {
+            type: Boolean,
         },
     }
 
