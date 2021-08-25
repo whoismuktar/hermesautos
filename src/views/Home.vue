@@ -10,17 +10,7 @@
                   <b>Buy a car entirely online, and have it safely delivered, contact-free. <router-link to="/about">Learn More</router-link></b>
                 </div>
 
-                <v-card flat tile max-width="70%" class="pa-8">
-                  <v-card-title class="px-0">Check Your VIN</v-card-title>
-                  <v-card-text class="px-0">
-                    <div>Enter your VIN Number</div>
-                    <v-text-field outlined dense hide-details="auto"></v-text-field>
-                  </v-card-text>
-
-                  <v-card-action>
-                    <v-btn dark width="100%" height="50">Search</v-btn>
-                  </v-card-action>
-                </v-card>
+                <vin-card :max-width="'70%'" />
               </div>
               <v-img contain :src="require('../assets/img/gle-benz.png')" class="car-holder" width="500" position="left"></v-img>
             </div>
@@ -111,12 +101,14 @@
 <script>
 import featuredReviews from '@/components/featuredReviews.vue'
 import carLogos from '@/components/carLogos.vue'
+import vinCard from '../components/vinCard.vue'
 
 export default {
   name: 'Home',
   components: {
     featuredReviews,
-    carLogos
+    carLogos,
+    vinCard
   },
   data(){return {
     iframeLink: "https://hermesautos.com/?page_id=8235?car_year=2015&cars_pp=16&cars_orderby=date&cars_order=desc&lay_style=view-grid-full&cars_grid=yes&current_value=2015&current_attr=car_year",
