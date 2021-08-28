@@ -7,8 +7,18 @@
     @extend .app-font;
     font-size: 3em;
 }
+.font-x4b {
+    @extend .app-font;
+    font-size: 1.5em;
+}
 .font-x5 {
     font-size: 1.2em;
+}
+.font-sm {
+    font-size: 14px;
+}
+.font-tiny {
+    font-size: 10px;
 }
 .borderTest {
     border: 2px solid black !important;
@@ -50,4 +60,28 @@ section {
 }
 a {
     text-decoration: none;
+}
+
+ol {
+  counter-reset: my-awesome-counter;
+}
+ol .st-Li {
+  counter-increment: my-awesome-counter;
+  list-style: none;
+  position: relative;
+  margin-top: 40px;
+}
+ol .st-Li::before {
+  content: counter(my-awesome-counter);
+  position: absolute;
+  left: -27px;
+  top: 3px;
+  border: 2px solid var(--v-primary-base);
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  line-height: 1rem;
+  color: var(--v-primary-base);
+  text-align: center;
+  font-size: 12px;
 }
