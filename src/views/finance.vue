@@ -28,39 +28,7 @@
 
     <section>
       <v-container>
-        <v-row no-gutters class="mt-0" align="center">
-          <v-col cols="10">
-            <div class="gradient lightBG-v d-flex align-center">
-              <div style="width:50%">
-                <div class="font-x2b">How It Works</div>
-
-                <div>
-                  <div>
-                    <ol>
-                      <li>
-                        <h4>Find Your Ride</h4>
-                        <div>Browse thousands of high-quality, low-mileage vehicles, and find the one that's right for you. Shop Now</div>
-                      </li>
-                      <li>
-                        <h4>Get Your Financing Terms</h4>
-                        <div>Click here to apply in minutes. You will need to select a vehicle first to receive exact financing terms.</div>
-                      </li>
-                      <li>
-                        <h4>Sign, Pay and Drive</h4>
-                        <div>Finalize your purchase, then schedule your delivery or in-store pickup. If you finance with us, Vroom will register your vehicle on your behalf and mail your registration and plates to you, once your state DMV has prepared them.</div>
-                      </li>
-                    </ol>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </v-col>
-          <v-col cols="2" class="d-flex align-center howItWorksBG-wrapper">
-            <div class="howItWorksBG">
-              <v-img contain width="450" position="center" :src="require('../assets/img/pic.png')" alt="Hermes Autos popular brands"></v-img>
-            </div>
-          </v-col>
-        </v-row>
+        <how-it-works :title="howItWorks.title" :lists="howItWorks.lists" :media="howItWorks.media" />
       </v-container>
     </section>
 
@@ -76,12 +44,14 @@ import tabView from '../components/tabView'
 import footerQuestion from '../components/footerQuestion'
 import pageHero from '../components/pageHero'
 import reviewCarousel from '../components/reviewCarousel'
+import howItWorks from '../components/howItWorks'
   export default {
   components: { 
     tabView,
     footerQuestion,
     pageHero,
     reviewCarousel,
+    howItWorks,
   },
     data: () => ({
       hero: {
@@ -91,6 +61,24 @@ import reviewCarousel from '../components/reviewCarousel'
         subtitle: "Apply in Minutes. Get Approved Fast. Highly Competitive Rates.",
         cta: "Apply Now",
         ctaAction: "",
+      },
+      howItWorks: {
+        title: "How It Works",
+        lists: [
+          {
+            title: "Find Your Ride",
+            content: "Browse thousands of high-quality, low-mileage vehicles, and find the one that's right for you. Shop Now"
+          },
+          {
+            title: "Get Your Financing Terms",
+            content: "Click here to apply in minutes. You will need to select a vehicle first to receive exact financing terms."
+          },
+          {
+            title: "Sign, Pay and Drive",
+            content: "Finalize your purchase, then schedule your delivery or in-store pickup. If you finance with us, Vroom will register your vehicle on your behalf and mail your registration and plates to you, once your state DMV has prepared them."
+          },
+        ],
+        media: require('../assets/img/pic.png')
       },
       model: 0,
       sellingPoint: [
@@ -142,43 +130,4 @@ import reviewCarousel from '../components/reviewCarousel'
 </script>
 
 <style scoped>
-
-.gradient.lightBG-v {
-  height: 500px;
-  padding: 50px;
-  background: linear-gradient(to top left, transparent 50%, var(--v-lightBG-base) 50%) no-repeat, linear-gradient(to top left, transparent 0.1%, var(--v-lightBG-base) 0.1%) no-repeat;
-  background-size: 15% 100%, 85% 100%;
-  background-position: 100% 0%, 0% 0%;
-  position: relative;
-}
-ol {
-  counter-reset: my-awesome-counter;
-}
-ol li {
-  counter-increment: my-awesome-counter;
-  list-style: none;
-  position: relative;
-  margin-top: 40px;
-}
-li::before {
-  content: counter(my-awesome-counter);
-  position: absolute;
-  left: -27px;
-  top: 3px;
-  border: 2px solid var(--v-primary-base);
-  width: 1.2rem;
-  height: 1.2rem;
-  border-radius: 50%;
-  line-height: 1rem;
-  color: var(--v-primary-base);
-  text-align: center;
-  font-size: 12px;
-}
-.howItWorksBG-wrapper {
-  position: relative;
-}
-.howItWorksBG {
-  position: absolute;
-  left: -190px;
-}
 </style>
