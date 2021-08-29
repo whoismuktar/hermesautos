@@ -5,10 +5,10 @@ import router from './router'
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faFacebookSquare, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons'
-import { faEquals, faPiggyBank } from '@fortawesome/free-solid-svg-icons';
+import { faCheckCircle, faEquals, faPiggyBank } from '@fortawesome/free-solid-svg-icons';
 
 // library.add(faFacebook);
-library.add([faFacebookSquare, faTwitter, faInstagram, faEquals, faPiggyBank]);
+library.add([faFacebookSquare, faTwitter, faInstagram, faEquals, faPiggyBank, faCheckCircle]);
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 
 Vue.config.productionTip = false
