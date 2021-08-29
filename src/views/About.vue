@@ -1,5 +1,81 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="about-us">
+    <page-hero :carImg="hero.carImg" :intro="hero.intro" :title="hero.title" :subtitle="hero.subtitle" :cta="hero.cta" :ctaAction="hero.ctaAction" />
+
+    <section>
+      <div class="font-x3b text-center mb-4">Meet The Team</div>
+
+      <v-row justify="center">
+        <v-col v-for="(person, index) in team" :key="index" cols="3">
+          <span>
+            <v-img contain class="mb-5" width="100" position="center" :src="person.avatar" :alt="person.fullName"></v-img>
+
+            <div>{{ person.fullName }}</div>
+            <div class="text-uppercase primary--text my-1">
+              <b>{{ person.position }}</b>
+            </div>
+            <div>{{ person.about }}</div>
+          </span>
+        </v-col>
+      </v-row>
+    </section>
+
+    <section>
+      <career-cta />
+    </section>
+
+    <section>
+      <footer-question />
+    </section>
+
   </div>
 </template>
+
+<script>
+import careerCta from '../components/careerCta.vue'
+import footerQuestion from '../components/footerQuestion.vue'
+import pageHero from '../components/pageHero'
+export default {
+  components: {
+    pageHero,
+    careerCta,
+    footerQuestion
+  },
+  data() {
+    return {
+      hero: {
+        carImg: require('../assets/img/gle-benz.png'),
+        intro: "About Hermes Autos",
+        title: "Get Your Next Car Delivered",
+        subtitle: "Great Prices. Better Cars. Delivered to You.",
+        cta: "Find Your Car",
+        ctaAction: "",
+      },
+      team: [
+        {
+          fullName: "Lawrence Jibowu",
+          position: "Director",
+          about: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis officiis soluta harum. Excepturi similique rerum mollitia deserunt voluptatem itaque sed quod quibusdam tempora suscipit! Consequatur voluptas quaerat culpa nobis asperiores!",
+          avatar: require('../assets/img/avatar.png'),
+        },
+        {
+          fullName: "Jelil Kabiyesi",
+          position: "Co-Founder",
+          about: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis officiis soluta harum. Excepturi similique rerum mollitia deserunt voluptatem itaque sed quod quibusdam tempora suscipit! Consequatur voluptas quaerat culpa nobis asperiores!",
+          avatar: require('../assets/img/avatar.png'),
+        },
+        {
+          fullName: "Tom Holland",
+          position: "CEO / Co-Founder",
+          about: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis officiis soluta harum. Excepturi similique rerum mollitia deserunt voluptatem itaque sed quod quibusdam tempora suscipit! Consequatur voluptas quaerat culpa nobis asperiores!",
+          avatar: require('../assets/img/avatar.png'),
+        }
+      ]
+    }
+  }
+}
+</script>
+
+<style>
+
+</style>
