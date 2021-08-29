@@ -177,7 +177,7 @@
                 </v-col>
 
                 <v-col cols="6">
-                    <div class="mt-n12">
+                    <div class="mt-n12 d-flex">
                         <v-img cover aspect-ratio="1" width="500" position="left" :src="require('../assets/img/side-car.png')" alt="Hermes Autos"></v-img>
                     </div>
                 </v-col>
