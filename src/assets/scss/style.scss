@@ -7,6 +7,10 @@
     @extend .app-font;
     font-size: 3em;
 }
+.font-x3b {
+    @extend .app-font;
+    font-size: 2em;
+}
 .font-x4b {
     @extend .app-font;
     font-size: 1.5em;
@@ -84,4 +88,8 @@ ol .st-Li::before {
   color: var(--v-primary-base);
   text-align: center;
   font-size: 12px;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
 }
