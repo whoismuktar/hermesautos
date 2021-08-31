@@ -11,8 +11,14 @@
     @extend .app-font;
     font-size: 2em;
 }
+.font-x3 {
+    font-size: 2em;
+}
 .font-x4b {
     @extend .app-font;
+    font-size: 1.5em;
+}
+.font-x4 {
     font-size: 1.5em;
 }
 .font-x5 {
