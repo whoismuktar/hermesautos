@@ -21,7 +21,7 @@
     </section>
 
     <section>
-      <career-cta />
+      <section-cta :section="sectionCta" />
     </section>
 
     <section>
@@ -32,13 +32,13 @@
 </template>
 
 <script>
-import careerCta from '../components/careerCta.vue'
+import sectionCta from '../components/sectionCta.vue'
 import footerQuestion from '../components/footerQuestion.vue'
 import pageHero from '../components/pageHero'
 export default {
   components: {
     pageHero,
-    careerCta,
+    sectionCta,
     footerQuestion
   },
   data() {
@@ -49,6 +49,12 @@ export default {
         title: "Get Your Next Car Delivered",
         subtitle: "Great Prices. Better Cars. Delivered to You.",
         cta: "Find Your Car",
+        ctaAction: "",
+      },
+      sectionCta: {
+        title: "We Are Hiring",
+        subtitle: "Want to join the team?",
+        cta: "View Careers At Hermes Autos",
         ctaAction: "",
       },
       team: [
