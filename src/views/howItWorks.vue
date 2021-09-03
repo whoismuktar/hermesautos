@@ -389,16 +389,31 @@
     </section>
 
     <section-cta :section="sectionCta" />
+    <section>
+        <v-container>
+            <starred-reviews />
+        </v-container>
+    </section>
+
+    <hr />
+
+    <section>
+        <footer-question />
+    </section>
   </div>
 </template>
 
 <script>
+import FooterQuestion from '../components/footerQuestion.vue'
 import pageHero from '../components/pageHero'
 import sectionCta from '../components/sectionCta.vue'
+import starredReviews from '../components/starredReviews.vue'
 export default {
     components: {
         pageHero,
-        sectionCta
+        sectionCta,
+        starredReviews,
+        FooterQuestion
     },
     data() {
         return {
