@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faFacebookSquare, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faCheckCircle, faEquals, faPiggyBank } from '@fortawesome/free-solid-svg-icons';
+import store from './store'
 
 // library.add(faFacebook);
 library.add([faFacebookSquare, faTwitter, faInstagram, faEquals, faPiggyBank, faCheckCircle]);
@@ -16,5 +17,6 @@ Vue.config.productionTip = false
 new Vue({
   vuetify,
   router,
+  store,
   render: h => h(App)
 }).$mount('#app')
