@@ -404,10 +404,10 @@
 </template>
 
 <script>
-import FooterQuestion from '../components/footerQuestion.vue'
+import FooterQuestion from '../components/footerQuestion'
 import pageHero from '../components/pageHero'
-import sectionCta from '../components/sectionCta.vue'
-import starredReviews from '../components/starredReviews.vue'
+import sectionCta from '../components/sectionCta'
+import starredReviews from '../components/starredReviews'
 export default {
     components: {
         pageHero,
