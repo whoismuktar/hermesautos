@@ -1,6 +1,6 @@
 <template>
   <div class="contact lightBG">
-      <div class="text-center my-12 pt-12">
+      <div class="text-center my-8 pt-12">
           <div class="font-x2b">Contact</div>
           <div>Any question or remarks? Just write us a message</div>
       </div>
@@ -60,7 +60,7 @@
 
                             <v-col cols="12">
                             <v-textarea
-                                v-model="details"
+                                v-model="message"
                                 :rules="[rules.required]"
                                 label="Your Details"
                                 height="150"
@@ -143,7 +143,7 @@
                             outlined
                         ></v-text-field>
                         <v-textarea
-                            v-model="details"
+                            v-model="message"
                             :rules="[rules.required]"
                             class="my-4"
                             label="Your Details"
@@ -182,7 +182,8 @@ export default {
   data() {
     return {
       sendLoader: false,
-      fullName: "",
+      firstName: "",
+      lastName: "",
       email: "",
       phone: "",
       details: "",
@@ -214,10 +215,11 @@ export default {
     submitContact() {
       this.sendLoader = true;
       const body = {
-        name: this.fullName,
+        firstName: this.firstName,
+        lastName: this.lastName,
         email: this.email,
         phone: this.phone,
-        details: this.details
+        message: this.message
       };
       console.log(body);
     //   axios
