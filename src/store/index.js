@@ -27,7 +27,7 @@ export default new Vuex.Store({
             location: "California",
             review: "Process was painless, delivery was fast. Getting rid of my old car simple and painless as well.",
             highlight: "Super fast with the entire transaction and paperwork.",
-            star: 4.5,
+            star: 5,
         },
         {
             name: "JK Rowling",
