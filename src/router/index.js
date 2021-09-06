@@ -44,6 +44,12 @@ const routes = [
     component: () => import('../views/reviews.vue')
   },
   {
+    path: '/contact',
+    alias: ["/contact-us"],
+    name: 'contact',
+    component: () => import('../views/contact.vue')
+  },
+  {
     path: '*',
     name: '404',
     component: () => import('../components/404.vue')
