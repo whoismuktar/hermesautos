@@ -16,9 +16,19 @@
             </div>
           </v-col>
 
-          <v-col cols="6" class="d-flex">
-            <div>
-              <v-img contain :src="carImg" class="mt-10" width="500" position="center"></v-img>
+          <v-col cols="6" class="d-flex flex-column justify-end align-end">
+            <div v-if="showRating" class="align-self-start mt-12">
+              <div class="pa-1 black white--text font-tiny">
+                  AVERAGE REVIEW RATING
+              </div>
+              <div class="borderLight text-center">
+                <h1 class="font-x2b">{{ avgRating }}</h1>
+                <v-icon v-for="(icon, icI) in parseInt(avgRating)" :key="icI" class="review-star" size="40" color="primary">star</v-icon>
+                <v-icon v-if=" avgRating % 1 != 0" size="40" color="primary">star_half</v-icon>
+              </div>
+            </div>
+            <div class="mt-n12">
+              <v-img contain :src="carImg" class="mt-10" width="400" position="right"></v-img>
             </div>
           </v-col>
         </v-row>
@@ -30,6 +40,7 @@
 
 <script>
 import vinCard from '../components/vinCard.vue'
+import { mapGetters } from 'vuex'
 export default {
     components: {
         vinCard
@@ -56,6 +67,13 @@ export default {
         vinCard: {
             type: Boolean,
         },
+        showRating: {
+            type: Boolean,
+            default: false
+        },
+    },
+    computed: {
+      ...mapGetters(["avgRating"])
     }
 
 }
