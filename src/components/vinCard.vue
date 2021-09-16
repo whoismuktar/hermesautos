@@ -7,9 +7,9 @@
         <v-text-field outlined dense hide-details="auto"></v-text-field>
         </v-card-text>
 
-        <v-card-action>
+        <!-- <v-card-action> -->
         <v-btn dark width="100%" height="50">Search</v-btn>
-        </v-card-action>
+        <!-- </v-card-action> -->
     </v-card>
   </div>
 </template>

@@ -7,33 +7,82 @@
       elevation="1"
     >
       <div class="d-flex">
-        <v-img
-          alt="Hermes Auto Logo"
-          :src="require('../assets/logo.png')"
-          contain
-          position="left"
-          height="60"
-          width="100"
-        />
+        <router-link to="/">
+          <v-img
+            alt="Hermes Auto Logo"
+            :src="require('../assets/logo.png')"
+            contain
+            position="left"
+            height="60"
+            width="100"
+          />
+        </router-link>
       </div>
 
       <v-spacer></v-spacer>
+      <div class="d-flex align-center">
+        <div class="d-flex signedIn-menuWrapper primary--text mr-2">
+          <router-link
+            v-for="(menu, index) in navMenu"
+            :key="index"
+            :to="menu.path"
+            class="signedIn-menu mr-3"
+          >
+            <v-icon>{{ menu.icon }}</v-icon>
+            <span>{{ menu.title }}</span>
+          </router-link>
+        </div>
 
-      <v-list light class="borderTest d-flex transparent">
-        <v-list-item v-for="(menu, index) in navMenu" :key="index" @click="$router.push(`/${menu.path}`)">
-          <v-list-item-title class="text-capitalize">{{ menu.title }}</v-list-item-title>
-          <!-- <v-list-item-action >{{ menu.title }}</v-list-item-action> -->
-        </v-list-item>
-      </v-list>
+        <v-menu :close-on-content-click="false" open-on-hover bottom offset-y>
+          <template v-slot:activator="{ on }">
+            <v-icon v-on="on">expand_more</v-icon>
+            <v-icon class="round-avatar">person</v-icon>
+          </template>
 
-      <!-- <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn> -->
+          <v-list>
+            <v-list-group
+              v-for="(item, index) in navMenu"
+              :key="index"
+              v-model="item.active"
+            >
+              <template v-slot:activator>
+                <v-list-item @click="$router.push(item.route)">
+                  <v-list-item-content>
+                    <v-list-item-title>{{ item.title }}</v-list-item-title>
+                  </v-list-item-content>
+                </v-list-item>
+              </template>
+
+              <v-list-item v-for="(subItem, i) in item.items" :key="i">
+                <v-list-item-content>
+                  <v-list-item-title>{{ subItem.title }}</v-list-item-title>
+                </v-list-item-content>
+              </v-list-item>
+            </v-list-group>
+          </v-list>
+        </v-menu>
+
+        <v-menu nudge-top="-50">
+          <template v-slot:activator="{ on, attrs }">
+            <v-btn icon v-bind="attrs" v-on="on">
+              <img
+                class="round-avatar mt-2"
+                width="10"
+                :src="require('@/assets/img/avatar.png')"
+              />
+              {{ attrs["aria-expanded"] }}
+              <v-icon v-if="attrs['aria-expanded']">expand_more</v-icon>
+              <v-icon v-else>expand_less</v-icon>
+            </v-btn>
+          </template>
+
+          <v-list>
+            <v-list-item v-for="n in 5" :key="n" @click="() => {}">
+              <v-list-item-title>Option {{ n }}</v-list-item-title>
+            </v-list-item>
+          </v-list>
+        </v-menu>
+      </div>
     </v-app-bar>
   </div>
 </template>
@@ -42,10 +91,24 @@
 export default {
     name: "NavBar",
     data(){return {
+      menus: [
+        {
+          icon: "work_outline",
+          title: "Comparaison de billet",
+          route: "/compare-ticket",
+        },
+        { icon: "search", title: "Rechercher", route: "/search-trip" },
+      ],
       navMenu: [
         {title: "buy", path: "buy"},
-        {title: "about", path: "about"},
+        {title: "sell", path: "https://sell.hermesautos.com"},
+        {title: "finance", path: "finance"},
         {title: "CSR", path: "csr"},
+        {title: "about", path: "about",
+          items: [
+            {title: "contact", path: "contact"}
+          ]
+        },
         {title: "contact", path: "contact"}
       ]
     }}
