@@ -1,0 +1,63 @@
+.home section {
+  // padding: 20px 98px;
+}
+.gradient.right {
+  position: relative;
+  height: 70vh;
+}
+.gradient.right::before {
+  content: "";
+  height: 100%;
+  background: linear-gradient(to top left, transparent 50%, var(--v-primary-base) 50%) no-repeat, linear-gradient(to top left, transparent 0.1%, var(--v-primary-base) 0.1%) no-repeat;
+  background-size: 18% 126%, 83% 100%;
+  background-position: 100% 0%, 0% 0%;
+  position: relative;
+  width: 60%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.hero {
+  height: 70vh;
+    h1 {
+      font-size: 2.5em;
+      line-height: 1
+    }
+}
+.hero .car-holder {
+  position: absolute;
+  bottom: 0px;
+  left: 48%;
+  // bottom: 10px;
+}
+section.testimonial .row {
+  height: 300px;
+}
+section.testimonial .testimonialBG {
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+.hero-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  height: 70vh;
+  width: 75%;
+}
+
+@media (max-width: 960px) {
+  .hero-content-wrapper {
+    padding: 12px;
+
+  .__content {
+    text-align: center;
+
+      h1 {
+        font-size: 2em;
+      } 
+    }
+  } 
+}
