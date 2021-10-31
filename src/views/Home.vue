@@ -23,9 +23,9 @@
         </v-row>
       </div>
 
-      <section>
+      <section class="mt-12">
         <v-container>
-          <iframe :src="iframeLink" frameborder="0" height="300" width="100%"></iframe>
+          <iframe :src="iframeLink" frameborder="0" height="350" width="100%"></iframe>
         </v-container>
       </section>
 
@@ -110,41 +110,47 @@ export default {
     carLogos,
     vinCard
   },
-  data(){return {
-    iframeLink: "https://hermesautos.com/?page_id=8235?car_year=2015&cars_pp=16&cars_orderby=date&cars_order=desc&lay_style=view-grid-full&cars_grid=yes&current_value=2015&current_attr=car_year",
-    values: [
-      {
-        attr: "Price",
-        title: "No haggling. No pressure.",
-        content: "We’ve eliminated the middleman and made the entire car buying process more efficient, which allows us to pass the savings on to our customers.",
-      },
-      {
-        attr: "Reconditioning",
-        title: "Multiple Inspections",
-        content: "Our cars are inspected for safety, mechanical and cosmetic issues. We only sell cars that have accident-free CARFAX vehicle history reports at the time of purchase and sale.",
-      },
-      {
-        attr: "Finance",
-        title: "Get a Competitive Rate",
-        content: "Vroom has strategic relationships with partners like Chase, Santander, and Ally to secure the best financing for you.",
-      },
-      {
-        attr: "Deliver to you",
-        title: "Delivery Straight to You",
-        content: "Delivering cars is at the heart of what we do. Save a trip to the dealership and let us bring your next car to you.",
-      },
-      {
-        attr: "7-DAY Returns",
-        title: "7 Days to Decide",
-        content: "Spend a week (or 250 miles) getting to know your vehicle. Take a trip, park it in your garage, drive it to work. If it’s not right, we’ll take it back.",
-      },
-      {
-        attr: "Coverage",
-        title: "Free Limited Warranty",
-        content: "A limited warranty is included with most Vroom vehicles, good for 90 days or 6,000 miles. The majority of our cars are still under their manufacturer’s warranty.",
-      }
-    ]
-  }}
+  data() {
+    return {
+      values: [
+        {
+          attr: "Price",
+          title: "No haggling. No pressure.",
+          content: "We’ve eliminated the middleman and made the entire car buying process more efficient, which allows us to pass the savings on to our customers.",
+        },
+        {
+          attr: "Reconditioning",
+          title: "Multiple Inspections",
+          content: "Our cars are inspected for safety, mechanical and cosmetic issues. We only sell cars that have accident-free CARFAX vehicle history reports at the time of purchase and sale.",
+        },
+        {
+          attr: "Finance",
+          title: "Get a Competitive Rate",
+          content: "Vroom has strategic relationships with partners like Chase, Santander, and Ally to secure the best financing for you.",
+        },
+        {
+          attr: "Deliver to you",
+          title: "Delivery Straight to You",
+          content: "Delivering cars is at the heart of what we do. Save a trip to the dealership and let us bring your next car to you.",
+        },
+        {
+          attr: "7-DAY Returns",
+          title: "7 Days to Decide",
+          content: "Spend a week (or 250 miles) getting to know your vehicle. Take a trip, park it in your garage, drive it to work. If it’s not right, we’ll take it back.",
+        },
+        {
+          attr: "Coverage",
+          title: "Free Limited Warranty",
+          content: "A limited warranty is included with most Vroom vehicles, good for 90 days or 6,000 miles. The majority of our cars are still under their manufacturer’s warranty.",
+        }
+      ]
+    }
+  },
+  computed: {
+    iframeLink() {
+      return "https://hermesautos.com/section-snippet/"
+    },
+  }
 }
 </script>
 
@@ -156,7 +162,7 @@ export default {
   /* height: 500px; */
   padding: 50px;
   background: linear-gradient(to top left, transparent 50%, var(--v-primary-base) 50%) no-repeat, linear-gradient(to top left, transparent 0.1%, var(--v-primary-base) 0.1%) no-repeat;
-  background-size: 15% 100%, 85% 100%;
+  background-size: 15% 100%, 88% 100%;
   background-position: 100% 0%, 0% 0%;
   position: relative;
 }
