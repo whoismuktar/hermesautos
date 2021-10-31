@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
-
+html,body { 
+    margin:0; 
+    padding:0; 
+    overflow-x:hidden; 
+}
 .app-font {
     font-family: 'Righteous';
 }
@@ -64,6 +68,9 @@
 .height100 {
     height: 100%;
 }
+.flipX {
+    transform: scaleX(-1);
+}
 
 section {
     padding-top: 40px;
@@ -78,6 +85,9 @@ section {
     max-width: 1455px;
 }
 
+.app-bold {
+    font-weight: 900;
+}
 .centerItem {
     margin: 0 auto;
 }
@@ -116,4 +126,28 @@ hr {
   background-color: lightgray;
   height: 1px;
   border: 0;
+}
+
+.gradient {
+    a {
+        color: #ffffff !important;
+        font-weight: 900;
+    }
+}
+
+@media (max-width: 960px) {
+    .gradient {
+        background-color: var(--v-primary-base) !important;
+    }
+
+    .__section_intro {
+        text-align: center;
+
+        .__section_title {
+            font-size: 1.5em;
+        }
+        .__section_subtitle {
+            font-size: 14px;
+        }
+    }
 }
