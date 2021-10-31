@@ -129,6 +129,31 @@ hr {
 }
 
 .gradient {
+    position: relative;
+    height: 70vh;
+
+    &::before {
+        content: "";
+        height: 100%;
+        background-size: 18% 126%, 83% 100%;
+        background-position: 100% 0%, 0% 0%;
+        position: relative;
+        width: 60%;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    &.right {
+        background: linear-gradient(to top left, transparent 50%, var(--v-primary-base) 50%) no-repeat, linear-gradient(to top left, transparent 0.1%, var(--v-primary-base) 0.1%) no-repeat;
+        background-size: 18% 126%, 83% 100%;
+        background-position: 100% 0%, 0% 0%;
+    }
+    &.lightBG-v {
+        background: linear-gradient(to top left, transparent 50%, var(--v-lightBG-base) 50%) no-repeat, linear-gradient(to top left, transparent 0.1%, var(--v-lightBG-base) 0.1%) no-repeat;
+        background-size: 15% 100%, 85% 100%;
+        background-position: 100% 0%, 0% 0%;
+    }
     a {
         color: #ffffff !important;
         font-weight: 900;
@@ -136,18 +161,24 @@ hr {
 }
 
 @media (max-width: 960px) {
-    .gradient {
-        background-color: var(--v-primary-base) !important;
-    }
+   .hero {
+        .gradient {
+            background-color: var(--v-primary-base) !important;
+        }
+
+        .car-holder {
+            display: none;
+        }
+   }
 
     .__section_intro {
         text-align: center;
+    }
 
-        .__section_title {
-            font-size: 1.5em;
-        }
-        .__section_subtitle {
-            font-size: 14px;
-        }
+    .__section_title {
+        font-size: 1.5em;
+    }
+    .__section_subtitle {
+        font-size: 14px;
     }
 }
