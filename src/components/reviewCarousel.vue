@@ -9,7 +9,7 @@
             v-bind="attrs"
             v-on="on"
             >
-            <v-icon size="50">arrow_back_ios</v-icon>
+            <v-icon size="40">arrow_back_ios</v-icon>
             </v-btn>
         </template>
         <template v-slot:next="{ on, attrs }">
@@ -20,7 +20,7 @@
             v-bind="attrs"
             v-on="on"
             >
-            <v-icon size="50">arrow_forward_ios</v-icon>
+            <v-icon size="40">arrow_forward_ios</v-icon>
             </v-btn>
         </template>
         <v-carousel-item
@@ -34,7 +34,7 @@
             tile
             class="d-flex flex-column justify-center align-center"
             >
-                <div>
+                <div class="px-12 text-center">
                 {{ review.content }}
                 </div>
                 <div>
@@ -64,6 +64,6 @@ export default {
 <style scoped>
 >>>.v-window__prev,
 >>>.v-window__next {
- background: transparent; 
+    background: transparent;
 }
 </style>

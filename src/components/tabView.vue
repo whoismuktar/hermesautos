@@ -1,7 +1,7 @@
 <template>
-  <div class="tabs-view">
+  <div class="tabs-view px-3">
       <v-row justify="center">
-          <v-col cols="3" v-for="(tab, index) in tabs" :key="index">
+          <v-col cols="12" sm="3" v-for="(tab, index) in tabs" :key="index">
               <div class="d-flex align-start">
                   <v-icon color="primary" class="mr-3 mt-1">check_circle</v-icon>
                   <div>

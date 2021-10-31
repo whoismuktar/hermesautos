@@ -23,7 +23,6 @@
                 <vin-card />
               </div>
               <v-img
-                v-if="!$vuetify.breakpoint.smAndDown"
                 contain
                 :src="require('@/assets/img/car-4.png')"
                 class="car-holder"

@@ -5,10 +5,10 @@
     <section>
       <div class="font-x3b text-center mb-4">Meet The Team</div>
 
-      <v-row justify="center">
-        <v-col v-for="(person, index) in team" :key="index" cols="3">
+      <v-row justify="center pa-4">
+        <v-col cols="12" sm="3" v-for="(person, index) in team" :key="index">
           <span>
-            <v-img contain class="mb-5" width="100" position="center" :src="person.avatar" :alt="person.fullName"></v-img>
+            <v-img contain class="mb-5 team-avatar" width="20%" position="center" :src="person.avatar" :alt="person.fullName"></v-img>
 
             <div>{{ person.fullName }}</div>
             <div class="text-uppercase primary--text my-1">

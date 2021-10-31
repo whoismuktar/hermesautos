@@ -4,10 +4,10 @@
           <div class="font-x2b">Contact</div>
           <div>Any question or remarks? Just write us a message</div>
       </div>
-      <div class="allChildrenCenter pa-12 ma-12 mt-0">
+      <div class="form-section">
         <v-container class="borderTest white radius20 pa-4">
             <v-row>
-                <v-col cols="5" class="primary py-12 px-8 radius20 d-flex flex-column justify-space-between">
+                <v-col cols="12" sm="5" class="primary py-12 px-8 radius20 d-flex flex-column justify-space-between">
                     <div>
                         <h3 class="font-x3b">
                             Contact us
@@ -16,11 +16,11 @@
                         <div>Fill up the form and our Team will get back to you within 24 hours.</div>
                     </div>
 
-                    <social-icons />
+                    <social-icons class="contact-social" />
                 </v-col>
 
-                <v-col cols="7" class="px-10">
-                    <v-form id="contact-form" class="that-green-color">
+                <v-col cols="12" sm="7" class="px-10">
+                    <v-form id="contact-form" class="">
                         <v-row>
                             <v-col cols="12" sm="6">
                                 <v-text-field
@@ -245,3 +245,18 @@ export default {
   },
 };
 </script>
+
+
+<style lang="scss" scoped>
+.form-section {
+    margin: 100px 0;
+}
+.contact-social {
+    margin-top: 40px;
+}
+@media (max-width: 960px) {
+    .__wrapper {
+        width: 100%;
+    }
+}
+</style>

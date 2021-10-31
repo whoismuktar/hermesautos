@@ -22,7 +22,50 @@
 
       <v-spacer></v-spacer>
       <div class="d-flex align-center">
-        <div class="d-flex signedIn-menuWrapper primary--text mr-2">
+        <v-menu v-if="$vuetify.breakpoint.smAndDown" :close-on-content-click="true" bottom offset-y>
+          <template v-slot:activator="{ on }">
+            <v-btn plain v-on="on">
+              <v-icon color="black">menu</v-icon>
+            </v-btn>
+          </template>
+
+          <v-list>
+            <v-list-group
+              v-model="item.active"
+              v-for="(item, index) in navMenu"
+              :key="index"
+              :to="item.ext ? item.path : item.path"
+              class="signedIn-menu"
+              @click="gotoRoute(item.path, item.ext)"
+            >
+              <template v-if="item.items" v-slot:appendIcon>
+                <v-icon>expand_more</v-icon>
+              </template>
+              <template v-else v-slot:appendIcon>
+                <span></span>
+              </template>
+
+              <template v-slot:activator>
+                <v-list-item  
+                    >
+                  <v-list-item-content>
+                    <v-list-item-title>
+                    {{ item.title }}
+                    </v-list-item-title>
+                  </v-list-item-content>
+                </v-list-item>
+              </template>
+
+              <v-list-item v-for="(subItem, i) in item.items" :key="i">
+                <v-list-item-content>
+                  <v-list-item-title>{{ subItem.title }}</v-list-item-title>
+                </v-list-item-content>
+              </v-list-item>
+            </v-list-group>
+          </v-list>
+        </v-menu>
+
+        <div v-else class="d-flex signedIn-menuWrapper primary--text mr-2">
           <span
             v-for="(menu, index) in navMenu"
             :key="index"
@@ -117,9 +160,9 @@ export default {
         },
         {
           title: "about", path: "about",
-          items: [
-            {title: "contact", path: "/contact"}
-          ]
+          // items: [
+          //   {title: "contact", path: "/contact"}
+          // ]
         },
         {title: "contact", path: "/contact"}
       ]

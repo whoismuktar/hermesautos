@@ -28,22 +28,21 @@
           </div>
         </div>
 
-        <v-row justify="center" align="center" class="mt-0">
+        <v-row justify="center" align="center" class="mt-0 px-3">
           <v-col
             v-for="(img, index) in financePartners"
             :key="index"
             cols="4"
-            class="allChildrenCenter"
           >
-            <span
-              ><v-img
+            <!-- <span> -->
+              <v-img
                 contain
-                width="200"
+                width="100%"
                 position="center"
                 :src="img"
                 alt="Hermes Autos popular brands"
-              ></v-img
-            ></span>
+              ></v-img>
+            <!-- </span> -->
           </v-col>
         </v-row>
       </v-container>
