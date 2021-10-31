@@ -23,15 +23,17 @@
       <v-spacer></v-spacer>
       <div class="d-flex align-center">
         <div class="d-flex signedIn-menuWrapper primary--text mr-2">
-          <router-link
+          <span
             v-for="(menu, index) in navMenu"
             :key="index"
-            :to="menu.path"
+            :to="menu.ext ? menu.path : menu.path"
+            :target="menu.ext ? '_blank' : ''"
             class="signedIn-menu mr-3"
+            @click="gotoRoute(menu.path, menu.ext)"
           >
             <v-icon>{{ menu.icon }}</v-icon>
             <span>{{ menu.title }}</span>
-          </router-link>
+          </span>
         </div>
 
         <!-- <v-menu :close-on-content-click="false" open-on-hover bottom offset-y>
@@ -101,18 +103,36 @@ export default {
         { icon: "search", title: "Rechercher", route: "/search-trip" },
       ],
       navMenu: [
-        {title: "buy", path: "buy"},
-        {title: "sell", path: "https://sell.hermesautos.com"},
-        {title: "finance", path: "finance"},
-        {title: "CSR", path: "csr"},
-        {title: "about", path: "about",
+        {
+          title: "buy", ext: true, path: "https://shop.hermesautos.com"
+        },
+        {
+          title: "sell", ext: true, path: "https://shop.hermesautos.com"
+        },
+        {
+          title: "finance", path: "/finance"
+        },
+        {
+          title: "CSR", path: "/csr"
+        },
+        {
+          title: "about", path: "about",
           items: [
-            {title: "contact", path: "contact"}
+            {title: "contact", path: "/contact"}
           ]
         },
-        {title: "contact", path: "contact"}
+        {title: "contact", path: "/contact"}
       ]
-    }}
+    }},
+    methods: {
+      gotoRoute(path, ext) {
+        if (ext) {
+          window.open(path, "_blank")
+        } else {
+          this.$router.push(`/${path}`)
+        }
+      }
+    }
 }
 </script>
 
@@ -121,6 +141,7 @@ export default {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px !important;
 }
 .signedIn-menu {
+  cursor: pointer;
   color: #000000;
   text-transform: capitalize;
   font-weight: 700;
