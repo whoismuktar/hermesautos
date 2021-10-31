@@ -129,7 +129,7 @@ export default {
         if (ext) {
           window.open(path, "_blank")
         } else {
-          this.$router.push(`/${path}`)
+          this.$router.push(`${path}`)
         }
       }
     }
