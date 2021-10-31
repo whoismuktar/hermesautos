@@ -8,6 +8,8 @@ import { faFacebookSquare, faTwitter, faInstagram } from '@fortawesome/free-bran
 import { faCheckCircle, faEquals, faPiggyBank } from '@fortawesome/free-solid-svg-icons';
 import store from './store'
 
+import "@/assets/scss/style.scss"
+
 // library.add(faFacebook);
 library.add([faFacebookSquare, faTwitter, faInstagram, faEquals, faPiggyBank, faCheckCircle]);
 Vue.component("font-awesome-icon", FontAwesomeIcon);

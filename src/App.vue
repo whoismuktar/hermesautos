@@ -24,7 +24,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
-  padding-top: 65px;
+  padding-top: 53px;
 }
 
 #nav {
@@ -40,5 +40,3 @@ export default {
   }
 }
 </style>
-
-<style src="@/assets/scss/style.scss" lang="scss"></style>
