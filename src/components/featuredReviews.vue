@@ -1,7 +1,7 @@
 <template>
   <div :class="`featuredReviews ${classes}`">
         <v-row>
-          <v-col cols="6" v-for="(review, index) in reviews" :key="index">
+          <v-col cols="12" sm="6" v-for="(review, index) in reviews" :key="index">
             <v-card flat class="pa-10 borderLight review">
               <h5 class="text-uppercase grey--text mb-2">{{ review.attr }}</h5>
               <div>{{ review.review }}</div>
