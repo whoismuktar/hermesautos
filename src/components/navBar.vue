@@ -1,11 +1,12 @@
 <template>
   <div class="navbar">
       <v-app-bar
-      app
-      color="white"
-      dark
-      elevation="1"
-    >
+        app
+        color="white"
+        dark
+        elevation="1"
+        class="appbar"
+      >
       <div class="d-flex">
         <router-link to="/">
           <v-img
@@ -33,7 +34,7 @@
           </router-link>
         </div>
 
-        <v-menu :close-on-content-click="false" open-on-hover bottom offset-y>
+        <!-- <v-menu :close-on-content-click="false" open-on-hover bottom offset-y>
           <template v-slot:activator="{ on }">
             <v-icon v-on="on">expand_more</v-icon>
             <v-icon class="round-avatar">person</v-icon>
@@ -60,9 +61,9 @@
               </v-list-item>
             </v-list-group>
           </v-list>
-        </v-menu>
+        </v-menu> -->
 
-        <v-menu nudge-top="-50">
+        <!-- <v-menu nudge-top="-50">
           <template v-slot:activator="{ on, attrs }">
             <v-btn icon v-bind="attrs" v-on="on">
               <img
@@ -81,7 +82,7 @@
               <v-list-item-title>Option {{ n }}</v-list-item-title>
             </v-list-item>
           </v-list>
-        </v-menu>
+        </v-menu> -->
       </div>
     </v-app-bar>
   </div>
@@ -115,6 +116,13 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+.appbar {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px !important;
+}
+.signedIn-menu {
+  color: #000000;
+  text-transform: capitalize;
+  font-weight: 700;
+}
 </style>
