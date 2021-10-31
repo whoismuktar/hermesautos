@@ -266,4 +266,15 @@ ul li {
 ul li a {
   color: #ffffff;
 }
+
+@media (max-width: 960px) {
+  
+.upper-footer {
+  padding: 100px 50px;
+
+  ._wrapper {
+    width: 100%;
+  }
+}
+}
 </style>
