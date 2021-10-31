@@ -1,12 +1,14 @@
 <template>
   <div class="footer black">
       <div class="upper-footer">
-          <h2 class="relative">Who We Are</h2>
-          <p class="relative">
-              Our hundreds of team members are helping Vroom revolutionize the way people buy, sell, and trade in cars. Count on us to make your next car buying experience the best you’ve ever had.
-          </p>
+          <div class="_wrapper">
+              <h2 class="relative">Electric Vehicles</h2>
+                <p class="relative">
+                    Our hundreds of team members are helping Vroom revolutionize the way people buy, sell, and trade in EVs. Count on us to make your next Electric Vehicle buying experience the best you’ve ever had.
+                </p>
 
-          <v-btn depressed color="primary">Learn More</v-btn>
+                <v-btn depressed color="primary" >Learn More About EVs</v-btn>
+          </div>
       </div>
       <div class="lower-footer py-12">
           <v-container class="app-max-width">
@@ -191,15 +193,22 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
     .upper-footer {
         color: #ffffff;
         position: relative;
         padding: 100px 98px;
         text-align: center;
-        background-image: url("../assets/img/pic.png");
+        background-image: url("../assets/img/ev.jpeg");
         background-size: cover;
         background-position: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        ._wrapper {
+            width: 70%;
+        }
     }
     .upper-footer::before {
         content: "";
