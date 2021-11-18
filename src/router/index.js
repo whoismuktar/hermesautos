@@ -50,6 +50,11 @@ const routes = [
     component: () => import('../views/contact.vue')
   },
   {
+    path: '/csr',
+    name: 'csr',
+    component: () => import('../views/Csr.vue')
+  },
+  {
     path: '*',
     name: '404',
     component: () => import('../components/404.vue')
