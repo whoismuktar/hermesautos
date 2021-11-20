@@ -139,24 +139,20 @@ export default {
     },
     salesReview: [
       {
-        content:
-          "1 Really good customer service. It was fast and easy to get financed and the vehicle I got was at a good price. Two thumbs up!",
-        author: "Author 1",
+        author: "Olumide Adewale",
+        content: "It was an incredibly simple and easy procedure! I wish I had another vehicle to offer for sale.",
       },
       {
-        content:
-          "2 Really good customer service. It was fast and easy to get financed and the vehicle I got was at a good price. Two thumbs up!",
-        author: "Author 2",
+        author: "Abdullah Yusuf",
+        content: "From start to finish, your customer service, communication updates, and overall procedure are all 5 stars. Thank you very much!",
       },
       {
-        content:
-          "3 Really good customer service. It was fast and easy to get financed and the vehicle I got was at a good price. Two thumbs up!",
-        author: "Author 3",
+        author: "Cynthia Nwoke",
+        content: "The procedure was easy to follow, and the delivery was quick. It was easy and straightforward to get rid of my old car.",
       },
       {
-        content:
-          "4 Really good customer service. It was fast and easy to get financed and the vehicle I got was at a good price. Two thumbs up!",
-        author: "Author 4",
+        author: "Tunde Peters",
+        content: "My experience with Hermes Autos was as easy as it could be. They provided me with a quote fast, and once I accepted it, the process proceeded along quickly and smoothly. If you're wanting to sell your car, I highly recommend using the service!",
       },
     ],
     sellingPoint: [
