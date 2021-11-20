@@ -36,22 +36,27 @@
             </div>
 
             <div class="car-brief">
-              <div class="d-flex align-center justify-space-between">
-                <v-img contain :src="require('@/assets/img/salon.svg')" class="vin-car-img" max-width="25%"></v-img>
-                <div class="car-brief-info">
-                  <h3 class="car-title text-center">
-                    2011 Mercedes-Benz E-Class
-                  </h3>
-                  <h3 class="car-title text-center">
-                    WDDHF8HB2BA296633
-                  </h3>
-                </div>
-              </div>
+              <v-row justify="space-between" align="center">
+                <v-col cols="12" sm="6" :class="{'d-flex justify-center': $vuetify.breakpoint.smAndDown}" align-self="center">
+                  <v-img contain :src="require('@/assets/img/salon.svg')" class="vin-car-img" max-width="25%"></v-img>
+                </v-col>
+
+                <v-col cols="12" sm="6">
+                  <div class="car-brief-info">
+                    <h3 class="car-title text-center">
+                      2011 Mercedes-Benz E-Class
+                    </h3>
+                    <h3 class="car-title text-center">
+                      WDDHF8HB2BA296633
+                    </h3>
+                  </div>
+                </v-col>
+              </v-row>
             </div>
 
             <div class="vin-summary vin-table">
               <v-row>
-                <v-col cols="3" v-for="(d, k) in vinResult" :key="k" class="vin-table-col">
+                <v-col cols="12" sm="3" v-for="(d, k) in vinResult" :key="k" class="vin-table-col">
                   <div class="result-key">{{ k.replace(/_/g,' ') }}</div>
                   <div class="result-data">{{ d }}</div>
                 </v-col>
@@ -147,11 +152,11 @@
                 </div>
               </v-stepper-content>
 
-              <v-stepper-content step="3">
+              <v-stepper-content step="3" :class="{'px-1': $vuetify.breakpoint.smAndDown}">
                 <v-card
                   class="my-12 mx-auto allChildrenCenter"
                   min-height="200px"
-                  width="70%"
+                  :width="!$vuetify.breakpoint.smAndDown ? '70%' : '100%'"
                   flat
                 >
                   <paystack
@@ -198,11 +203,12 @@ export default {
   data() {
     return {
       email: "foobar@example.com", // Customer email
-      amount: 1000000, // in kobo
+      amount: 100000, // in kobo
       vin: "WDDHF8HB2BA296633",
       loading: false,
-      showDialog: false,
+      showDialog: !false,
       fullReportActive: false,
+      vinCheckSuccessful: true,
       step: 1,
       customer: {
         email: "mail@yahoo.com"
