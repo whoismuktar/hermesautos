@@ -37,15 +37,11 @@
                   <div class="timeline-content">
                     <div class="mb-2">
                       <v-icon color="primary" class="mr-2">check_circle</v-icon>
-                      <b>Choose Your Car</b>
+                      <b>Select a Vehicle</b>
                     </div>
                     <div class="ml-8">
                       <div>
-                        Explore thousands of high-quality, low-mileage vehicles
-                        on hermesautos.com, with new cars and trucks added every
-                        week. All vehicles pass a thorough inspection and come
-                        with a free CarFax vehicle history report so you can
-                        feel confident you’re getting a good ride.
+                        On hermesautos.com, you'll find thousands of high-quality, low-mileage vehicles, with new cars and trucks added every week. All of the vehicles are thoroughly inspected, so you can rest assured that you'll be enjoying a fantastic ride.
                       </div>
 
                       <v-btn
@@ -55,7 +51,7 @@
                         color="primary"
                         class="pl-0 mt-4"
                       >
-                        <b>More about Hermes Auto's Vehicles</b>
+                        <b>Begin your Purchase.</b>
                       </v-btn>
                     </div>
                   </div>
@@ -67,9 +63,7 @@
                     </div>
                     <div class="ml-8">
                       <div>
-                        Click “Start Purchase” and create an account on
-                        hermesautos.com to save future information and purchase
-                        details.
+                        Click “Start Purchase” and create an account on hermesautos.com, our system will save your information for future purchase.
                       </div>
 
                       <v-btn
@@ -87,15 +81,11 @@
                   <div class="timeline-content">
                     <div class="mb-2">
                       <v-icon color="primary" class="mr-2">check_circle</v-icon>
-                      <b>Choose How to Pay</b>
+                      <b>Select a Payment Method</b>
                     </div>
                     <div class="ml-8">
                       <div>
-                        Finance with Hermes Autos and we make the hard part
-                        easy. We partner with a dozen major banks to get you the
-                        right rate. You can also pay with cash or finance with
-                        your own bank. Complete this step and a Hermes Autos Car
-                        Specialist will be in touch shortly to discuss further
+                        You have the option of paying with cash or financing through your bank. After you've completed this step, a Hermes Autos Car Specialist will contact you to go over the details.
                         details.
                       </div>
 
@@ -107,31 +97,6 @@
                         class="pl-0 mt-4"
                       >
                         <b>More about Financing</b>
-                      </v-btn>
-                    </div>
-                  </div>
-
-                  <div class="timeline-content">
-                    <div class="mb-2">
-                      <v-icon color="primary" class="mr-2">check_circle</v-icon>
-                      <b>Tell Us About Your Trade</b>
-                    </div>
-                    <div class="ml-8">
-                      <div>
-                        If you have a trade, get a fast, easy appraisal by
-                        giving us some basic details about your vehicle. This
-                        will give our Car Specialist even more information to be
-                        able to structure the right deal for you.
-                      </div>
-
-                      <v-btn
-                        depressed
-                        text
-                        plain
-                        color="primary"
-                        class="pl-0 mt-4"
-                      >
-                        <b>More about Trading In</b>
                       </v-btn>
                     </div>
                   </div>
@@ -166,15 +131,11 @@
                   <div class="timeline-content">
                     <div class="mb-2">
                       <v-icon color="primary" class="mr-2">check_circle</v-icon>
-                      <b>Upload Key Documents</b>
+                      <b>Upload Important Documents</b>
                     </div>
                     <div class="ml-8">
                       <div>
-                        Take a photo of your driver’s license and proof of
-                        insurance to verify your identity. Our Car Specialist
-                        will request these when they give you a call and will
-                        provide an easy upload link. Depending on your
-                        financing, you may be asked to confirm other details.
+                        To prove your identification, snap a picture of your driver's license and proof of insurance. When our Car Specialist calls you, they'll ask for these and send you a link to submit them. You may be prompted to confirm additional facts based on your funding.
                       </div>
                     </div>
                   </div>
@@ -182,13 +143,11 @@
                   <div class="timeline-content">
                     <div class="mb-2">
                       <v-icon color="primary" class="mr-2">check_circle</v-icon>
-                      <b>Place a Deposit</b>
+                      <b>Put down a deposit</b>
                     </div>
                     <div class="ml-8">
                       <div>
-                        With a $49 non-refundable deposit from you, we’ll hold
-                        your vehicle for 24 hours. This ensures no one else can
-                        buy the vehicle while you finalize the contract details.
+                        We'll retain your vehicle for 24 hours if you pay a non-refundable deposit. This ensures that no one else can purchase the vehicle while the deal is being finalized. The deposit amount varies depending on the car.
                       </div>
                     </div>
                   </div>
@@ -196,16 +155,11 @@
                   <div class="timeline-content">
                     <div class="mb-2">
                       <v-icon color="primary" class="mr-2">check_circle</v-icon>
-                      <b>Sign Here</b>
+                      <b>Sign Document</b>
                     </div>
                     <div class="ml-8">
                       <div>
-                        We will either overnight your paperwork for signature or
-                        email to you for e-signature (dependent on the
-                        requirements of your purchase). Review carefully, sign
-                        where noted and return/complete your paperwork within 24
-                        hours. Once we’ve got it, we’ll confirm it looks good
-                        and then the car will be yours.
+                        We'll either send your documentation to you for signature overnight or email it to you for e-signature (dependent on the requirements of your purchase). Review your paperwork carefully, sign where indicated, and return or complete it within 24 hours. We'll ensure everything looks good once we have it, and then the automobile will be yours. 
                       </div>
 
                       <v-btn
@@ -216,31 +170,6 @@
                         class="pl-0 mt-4"
                       >
                         <b>More about Buying A Car with Heres Autos</b>
-                      </v-btn>
-                    </div>
-                  </div>
-
-                  <div class="timeline-content">
-                    <div class="mb-2">
-                      <v-icon color="primary" class="mr-2">check_circle</v-icon>
-                      <b>Tell Us About Your Trade</b>
-                    </div>
-                    <div class="ml-8">
-                      <div>
-                        If you have a trade, get a fast, easy appraisal by
-                        giving us some basic details about your vehicle. This
-                        will give our Car Specialist even more information to be
-                        able to structure the right deal for you.
-                      </div>
-
-                      <v-btn
-                        depressed
-                        text
-                        plain
-                        color="primary"
-                        class="pl-0 mt-4"
-                      >
-                        <b>More about Trading In</b>
                       </v-btn>
                     </div>
                   </div>
@@ -275,14 +204,11 @@
                   <div class="timeline-content">
                     <div class="mb-2">
                       <v-icon color="primary" class="mr-2">check_circle</v-icon>
-                      <b>Plan for Delivery</b>
+                      <b>Make a Delivery Plan</b>
                     </div>
                     <div class="ml-8">
                       <div>
-                        With your signed and approved paperwork and deposit, we
-                        give your car one last inspection and book it for
-                        delivery. Once it’s on the road to you, our Delivery
-                        Support Team will be in touch with regular updates.
+                        We give your automobile a final inspection and schedule delivery after receiving your signed and authorized papers and money. Our Delivery Support Team will keep you updated as soon as it's on its way to you.
                       </div>
                     </div>
                   </div>
@@ -290,14 +216,11 @@
                   <div class="timeline-content">
                     <div class="mb-2">
                       <v-icon color="primary" class="mr-2">check_circle</v-icon>
-                      <b>Meet Your New Car</b>
+                      <b>Meet Your New Vehicle</b>
                     </div>
                     <div class="ml-8">
                       <div>
-                        Your vehicle will typically arrive within 10-14 days of
-                        purchase, though sometimes it can take longer. We ship
-                        your car right to your home, or to a convenient nearby
-                        location.
+                        Typically, your vehicle will arrive within 4-6 weeks following your order, though this may take longer in some cases. Your car will be delivered to your home or a convenient location near you.
                       </div>
 
                       <v-btn
@@ -315,15 +238,11 @@
                   <div class="timeline-content">
                     <div class="mb-2">
                       <v-icon color="primary" class="mr-2">check_circle</v-icon>
-                      <b>Check for Temp Tags</b>
+                      <b>Look for Temporary Tags</b>
                     </div>
                     <div class="ml-8">
                       <div>
-                        Your car arrives with temporary tags allowing you to
-                        drive the vehicle immediately. You’ll receive an email
-                        with details about titling and registration upon
-                        delivery. If you financed your vehicle with Hermes
-                        Autos, we file your DMV paperwork for you.
+                        Your automobile will be delivered with temporary tags that will allow you to drive it right away. Upon delivery, you'll receive an email with information about titling and registration. We file your DMV paperwork for you if you financed your vehicle through Hermesautos.com. 
                       </div>
 
                       <v-btn
@@ -345,10 +264,7 @@
                     </div>
                     <div class="ml-8">
                       <div>
-                        To get to know your car, it takes more than a trip
-                        around the block. You have a full week (7 days or 250
-                        miles) to make sure it’s right for you. If it’s not,
-                        we’ll take it back and refund the purchase price.
+                        It takes more than a lap around the block to get to know your car. You have a week (7 days or 250 miles) to decide if it's the best fit for you.
                       </div>
 
                       <v-btn
@@ -370,10 +286,7 @@
                     </div>
                     <div class="ml-8">
                       <div>
-                        Feel good that you got a great car at a great price,
-                        delivered right to you. Enjoy your ride, tell your
-                        friends and give our Customer Support team a shout (855)
-                        219-5411 if you need anything else.
+                        Feel good about yourself for getting a wonderful car at a great price and having it delivered right to your door. Enjoy your journey, tell your friends, and if you need anything more, give our Customer Support staff a call.
                       </div>
                     </div>
                   </div>
@@ -404,20 +317,16 @@
                     <v-icon size="50" color="primary">calculate</v-icon>
                   </span>
                   <div class="mb-4">
-                    <b class="font-x3">Get Your Price</b>
+                    <b class="font-x3">Get a Quote</b>
                   </div>
                   <div class="timeline-content">
                     <div class="mb-2">
                       <v-icon color="primary" class="mr-2">check_circle</v-icon>
-                      <b>Tell Us About Your Vehicle</b>
+                      <b>Describe your Vehicle to us.</b>
                     </div>
                     <div class="ml-8">
                       <div>
-                        Provide basic information about your vehicle including
-                        your license plate or VIN, mileage, and condition.
-                        Hermes Autos’s proprietary buying system gives you an
-                        instant price for your vehicle based on your description
-                        and data from thousands of similar transactions.
+                        Provide basic car information, such as your license plate or VIN, mileage, and condition. Based on your description and statistics from hundreds of comparable transactions, Hermesautos' exclusive buying technology provides you with an instant price for your vehicle.
                       </div>
                     </div>
                   </div>
@@ -425,15 +334,11 @@
                   <div class="timeline-content">
                     <div class="mb-2">
                       <v-icon color="primary" class="mr-2">check_circle</v-icon>
-                      <b>Get Your Instant Price</b>
+                      <b>Get an Instant Quote</b>
                     </div>
                     <div class="ml-8">
                       <div>
-                        We'll give you an instant price for your vehicle that is
-                        good for the earlier of 7 days or 250 additional miles.
-                        If we’re unable to calculate an instant price, one of
-                        our car-buying experts will email you a price typically
-                        within the same day.
+                        We'll provide you an instant price for your vehicle that is valid for 7 days or 250 extra miles, whichever comes first. If we can't compute an instant quote, one of our car-buying experts will normally email you a price the same day.
                       </div>
 
                       <v-btn
@@ -473,21 +378,16 @@
                     <v-icon size="50" color="primary">description</v-icon>
                   </span>
                   <div class="mb-4">
-                    <b class="font-x3">Close the Deal</b>
+                    <b class="font-x3">Complete the transaction</b>
                   </div>
                   <div class="timeline-content">
                     <div class="mb-2">
                       <v-icon color="primary" class="mr-2">check_circle</v-icon>
-                      <b>Verify Your Information</b>
+                      <b>Double-check Your Information</b>
                     </div>
                     <div class="ml-8">
                       <div>
-                        When you’re ready to sell your vehicle to us (price is
-                        good for 7 days or an additional 250 miles), you’ll
-                        verify ownership information and upload pictures of your
-                        photo ID and registration. You’re one step closer to
-                        getting paid! Our team will be in touch to discuss
-                        transferring your title and finalizing your deal.
+                        You'll check ownership information and upload images of your photo ID, registration, title in your name (if applicable), and odometer when you're ready to sell your vehicle to us (pricing is good for 7 days or an additional 250 miles). You're one step closer to receiving your payment! Our team will contact you to discuss the transfer of your title and the finalization of your transaction.
                       </div>
                     </div>
                   </div>
@@ -495,14 +395,11 @@
                   <div class="timeline-content">
                     <div class="mb-2">
                       <v-icon color="primary" class="mr-2">check_circle</v-icon>
-                      <b>Schedule Your Pickup</b>
+                      <b>Make Your Pickup Appointment</b>
                     </div>
                     <div class="ml-8">
                       <div>
-                        Our team will work with you to schedule a free pickup
-                        from your driveway or a convenient location near you
-                        (within the lower 48 states). That's right, pickup is
-                        absolutely free
+                        Our team will work with you to arrange a free pickup from your driveway or a nearby location that is convenient for you (within our coverage region). That's right, there's no charge for pick-up.
                       </div>
 
                       <v-btn
@@ -547,24 +444,13 @@
                   <div class="timeline-content">
                     <div class="mb-2">
                       <v-icon color="primary" class="mr-2">check_circle</v-icon>
-                      <b>Look Out for Your Check</b>
+                      <b>Keep an eye out for your payment</b>
                     </div>
                     <div class="ml-8">
                       <div>
-                        With confirmation of pickup, we will process your
-                        payment and send you a check via overnight mail.
+                        We'll process your payment and send it to you by via your choice of direct deposit after we get confirmation of pickup.
                       </div>
                     </div>
-
-                    <v-btn
-                      depressed
-                      text
-                      plain
-                      color="primary"
-                      class="pl-0 mt-4"
-                    >
-                      <b>More about Paid</b>
-                    </v-btn>
                   </div>
                 </v-timeline-item>
               </v-timeline>
@@ -608,7 +494,7 @@ export default {
         intro: "How It Works",
         title: "BUYING AND SELLING MADE EASY",
         subtitle:
-          "You’ve found it: The better way to buy or sell a car. Find a great car and make it yours or sell us the one you have, all without a trip to the dealership. But how, exactly? Here’s how.",
+          "You've discovered the better way for purchasing a vehicle. \n Find a fantastic car and make it yours, all without having to visit a dealership. But how precisely do you do it? Here's how to do it.",
         cta: "Shop Now",
         ctaAction: "",
       },
