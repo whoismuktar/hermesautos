@@ -5,7 +5,7 @@
     <section>
       <div class="font-x3b text-center mb-4">Meet The Team</div>
 
-      <v-row justify="center pa-4">
+      <v-row justify="center">
         <v-col cols="12" sm="3" v-for="(person, index) in team" :key="index">
           <span>
             <v-img contain class="mb-5 team-avatar" width="20%" position="center" :src="person.avatar" :alt="person.fullName"></v-img>
