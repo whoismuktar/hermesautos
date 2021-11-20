@@ -34,8 +34,8 @@
             tile
             class="d-flex flex-column justify-center align-center"
             >
-                <div class="px-12 text-center">
-                {{ review.content }}
+                <div class="px-12 text-center" style="width: 75%">
+                    {{ review.content }}
                 </div>
                 <div>
                 <em class="d-flex">
