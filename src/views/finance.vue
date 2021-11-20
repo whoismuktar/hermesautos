@@ -21,10 +21,9 @@
     <section>
       <v-container>
         <div class="text-center">
-          <h2 class="mb-4">Our Lending Partners</h2>
+          <h2 class="mb-4 font-x3b">Our Lending Partners</h2>
           <div>
-            We work with more than a dozen banks and lending partners to get you
-            a competitive rate. Here are just a few:
+            We work with over a dozen partners to find you a great deal on your ideal automobile at an affordable rate. 
           </div>
         </div>
 
@@ -82,9 +81,9 @@ export default {
     hero: {
       carImg: require("../assets/img/gle-benz.png"),
       intro: "FINANCE WITH Hermes Autos",
-      title: "Your Low Rate Awaits",
+      title: "Buy Your Dream Car With Ease",
       subtitle:
-        "Apply in Minutes. Get Approved Fast. Highly Competitive Rates.",
+        "Financing with Hermes Autos; makes buying the car of your dreams a lot easier. You can explore our exclusive vehicle inventory just for you after pre-qualifying for Hermes Autos Vehicle Finance.",
       cta: "Apply Now",
       ctaAction: "",
     },
@@ -92,19 +91,19 @@ export default {
       title: "How It Works",
       lists: [
         {
-          title: "Find Your Ride",
+          title: "Look for a Ride",
           content:
-            "Browse thousands of high-quality, low-mileage vehicles, and find the one that's right for you. Shop Now",
+            "Find the vehicle that's right for you among thousands of high-quality, low-mileage vehicles.",
         },
         {
-          title: "Get Your Financing Terms",
+          title: "Get Your Financing Offers",
           content:
-            "Click here to apply in minutes. You will need to select a vehicle first to receive exact financing terms.",
+            "Apply in minutes, click here. To receive precise financing offers, you must first choose a vehicle.",
         },
         {
-          title: "Sign, Pay and Drive",
+          title: "Accept Offer, Pay and Drive",
           content:
-            "Finalize your purchase, then schedule your delivery or in-store pickup. If you finance with us, Hermes Autos will register your vehicle on your behalf and mail your registration and plates to you, once your state DMV has prepared them.",
+            "Finalize your purchase as soon as you accept our Financing Offer. Pay the 30% initial contribution and start driving your dream Car.",
         },
       ],
       media: require("../assets/img/pic.png"),
@@ -114,43 +113,39 @@ export default {
       {
         title: "Apply in Minutes",
         content:
-          "Apply online in as few as 5 minutes. We'll respond quickly with your financing information.",
+          "Apply online in as little as 5 minutes. We'll get back to you right away with your financing options.",
       },
       {
-        title: "Highly Competitive Rates",
+        title: "Incredibly Low Rates",
         content:
-          "Our 12+ banks and lending partners will compete with each other to get you a low rate.",
+          "We work with a network of partners around the country to ensure you get the best rates possible.",
       },
       {
         title: "Easy Registration",
         content:
-          "When you finance with Hermes Autos, we will register your vehicle on your behalf and mail your registration and plates to you.",
+          "We will handle the vehicle registration and insurance process on your behalf when you finance with Hermes Autos.",
       },
     ],
     financeReview: [
       {
-        content:
-          "1 Really good customer service. It was fast and easy to get financed and the vehicle I got was at a good price. Two thumbs up!",
-        author: "Author 1",
+        author: "John Nwagwu",
+        content: "Hermes Autos Finance provided better financing than most commercial banks. The delivery was simple and painless, and the entire process was completed in a flash.",
         date: "2020-10-07",
       },
       {
-        content:
-          "2 Really good customer service. It was fast and easy to get financed and the vehicle I got was at a good price. Two thumbs up!",
-        author: "Author 2",
+        author: "Hamed Yusuf",
+        content: "Customer service is outstanding. The financing process was quick and simple, and the vehicle I purchased was reasonably priced.",
         date: "2010-11-11",
       },
       {
-        content:
-          "3 Really good customer service. It was fast and easy to get financed and the vehicle I got was at a good price. Two thumbs up!",
-        author: "Author 3",
+        author: "Erica Johnson",
+        content: "The vehicle is exactly as stated; the purchasing procedure was straightforward, and the financing options were fantastic.",
         date: "2008-04-21",
       },
       {
-        content:
-          "4 Really good customer service. It was fast and easy to get financed and the vehicle I got was at a good price. Two thumbs up!",
-        author: "Author 4",
-        date: "2021-05-14",
+        author: "Yemi Adebola",
+        content: "I needed to upgrade our vehicles as a business owner; therefore I looked for a firm that could do it in a straightforward and quick manner. After only a few incredibly simple questions, Hermes Autos Finance took care of everything for me.",
+        date: "2021-08-14",
       },
     ],
     financePartners: [
