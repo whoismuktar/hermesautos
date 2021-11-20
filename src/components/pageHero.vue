@@ -87,6 +87,11 @@ export default {
 
 .heroHeight {
   height: 400px;
+
+  ._title {
+    line-height: 1;
+    margin-bottom: 10px;
+  }
 }
 .hero {
   position: relative;
