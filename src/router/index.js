@@ -20,7 +20,7 @@ const routes = [
   },
   {
     path: '/sell',
-    name: 'FinaSellnce',
+    name: 'Finance',
     component: () => import('../views/sell.vue')
   },
   {
@@ -64,6 +64,22 @@ const routes = [
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else { 
+      if (to.hash) {
+        // hash selection scroll
+        return {
+          selector: to.hash,
+          behavior: 'smooth',
+        }
+      } else {
+        // scroll to top
+        return { x: 0, y: 0 }
+      }
+    }
+  },
   routes
 })
 
