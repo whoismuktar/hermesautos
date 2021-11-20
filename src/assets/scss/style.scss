@@ -40,6 +40,10 @@ html,body {
 .radius20 {
     border-radius: 20px;
 }
+.v-btn__content {
+    text-transform: none;
+    letter-spacing: 0;
+}
 
 .borderLight {
     border: 1px solid #e6c0c0 !important;
@@ -64,6 +68,9 @@ html,body {
 }
 .inheritHeight {
     height: inherit;
+}
+.fillHeight {
+    height: 100vh;
 }
 .height100 {
     height: 100%;
