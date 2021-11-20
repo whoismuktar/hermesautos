@@ -190,8 +190,8 @@ export default {
         title: "Contact",
         items: [
           {
-            title: "+123456789",
-            path: "tel:123456789",
+            title: "+1 305-424-8922",
+            path: "tel:13054248922",
           },
           {
             title: "faq",
