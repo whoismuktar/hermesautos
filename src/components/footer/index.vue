@@ -1,17 +1,7 @@
 <template>
   <div class="footer black">
-    <div class="upper-footer">
-      <div class="_wrapper">
-        <h2 class="relative">Electric Vehicles</h2>
-        <p class="relative">
-          Our hundreds of team members are helping Hermes Autos revolutionize
-          the way people buy, sell, and trade in EVs. Count on us to make your
-          next Electric Vehicle buying experience the best you’ve ever had.
-        </p>
+    <upper-footer />
 
-        <v-btn depressed color="primary">Learn More About EVs</v-btn>
-      </div>
-    </div>
     <div class="lower-footer py-12">
       <v-container class="app-max-width">
         <v-row class="mb-0">
@@ -41,7 +31,7 @@
           <v-col cols="12" sm="4" class="pb-0">
             <v-img
               contain
-              :src="require('../assets/logo.png')"
+              :src="require('../../assets/logo.png')"
               class="car-holder"
               width="170"
               position="left"
@@ -140,11 +130,13 @@
 
 <script>
 import socialIcons from "@/components/socialIcons";
+import UpperFooter from './upperFooter';
 
 export default {
   name: "appFooter",
   components: {
     socialIcons,
+    UpperFooter,
   },
   data() {
     return {
@@ -226,6 +218,9 @@ export default {
     allMenus() {
       return [this.menu1, this.menu2, this.menu3, this.menu4];
     },
+    customUpperFooter() {
+      return this.$route.meta.customUpperFooter;
+    },
   },
 };
 </script>
@@ -236,7 +231,6 @@ export default {
   position: relative;
   padding: 100px 98px;
   text-align: center;
-  background-image: url("../assets/img/ev.jpeg");
   background-size: cover;
   background-position: center;
   display: flex;
