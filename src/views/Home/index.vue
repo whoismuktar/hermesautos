@@ -77,6 +77,62 @@
                 </div> -->
           </v-col>
         </v-row>
+
+        <v-row class="mt-12">
+          <v-col cols="12" md="4">
+            <div class="allChildrenCenter">
+              <v-img
+                cover
+                :src="require('@/assets/img/wrker.jpeg')"
+                position="center"
+                class="round mr-3"
+              ></v-img>
+
+              <div>
+                <div class="app-bold">High Quality Cars</div>
+                <div>Multiple inspections. Free CARFAX® history report. Free limited warranty.</div>
+              </div>
+            </div>
+          </v-col>
+
+          <v-col cols="12" md="4">
+            <div class="allChildrenCenter">
+              <v-img
+                cover
+                :src="require('@/assets/img/car-bg1.jpeg')"
+                position="center"
+                class="round mr-3"
+              ></v-img>
+
+              <div>
+                <div class="app-bold">High Quality Cars</div>
+                <div>No haggling. No hassles. An easy and efficient car buying process— the way it should be.</div>
+              </div>
+            </div>
+          </v-col>
+
+          <v-col cols="12" md="4">
+            <div class="allChildrenCenter">
+              <v-img
+                cover
+                :src="require('@/assets/img/car-bg2.jpeg')"
+                position="center"
+                class="round mr-3"
+              ></v-img>
+
+              <div>
+                <div class="app-bold">High Quality Cars</div>
+                <div>Get your car or truck shipped to your home or a convenient nearby location.</div>
+              </div>
+            </div>
+          </v-col>
+        </v-row>
+
+        <div class="text-center my-10">
+          <v-btn depressed tile large color="primary" href="http://shop.hermesautos.com">
+            <b>SHOP VEHICLES</b>
+          </v-btn>
+        </div>
       </v-container>
     </section>
 
@@ -147,7 +203,7 @@
           </div>
 
           <router-link to="/about" class="text-capitalize">
-            <b>LEARN MORE ABOUT Hermes Autos</b>
+            <b class="text-uppercase">LEARN MORE ABOUT Hermes Autos</b>
           </router-link>
         </div>
 
