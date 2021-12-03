@@ -22,20 +22,18 @@
 
       <v-spacer></v-spacer>
 
-        <!-- <nav-menu-links /> -->
-
-        <div class="d-flex align-center signedIn-menuWrapper primary--text mr-2">
+        <!-- Desktop Menu -->
+        <div v-if="$vuetify.breakpoint.smAndUp" class="d-flex align-center signedIn-menuWrapper primary--text mr-2">
           <span
             v-for="(menu, index) in navMenu"
             :key="index"
             :to="menu.ext ? menu.path : menu.path"
             :target="menu.ext ? '_blank' : ''"
-            class="signedIn-menu mr-3"
+            class="signedIn-menu mr-3 desktop-menu"
             @click="gotoRoute(menu.path, menu.ext)"
           >
             <span v-if="!menu.items">{{ menu.title }}</span>
 
-            
             <!-- <v-menu offset-y> -->
             <v-menu nudge-top="-7" v-else :close-on-content-click="!true" bottom offset-y>
               <template v-slot:activator="{ on }">
@@ -54,7 +52,7 @@
                 <v-list-tile
                   v-for="(sub, i) in menu.items"
                   :key="i"
-                  class="pa-2"
+                  class="pa-2 sub-items"
                   @click="gotoRoute(sub.path, sub.ext)"
                 >
                   <v-list-tile-title class="cursorMe px-3">
@@ -65,42 +63,9 @@
             </v-menu>
           </span>
         </div>
-        <!-- <v-list light class="d-flex">
-          <v-list-group
-            v-model="item.active"
-            v-for="(item, index) in navMenu"
-            :key="index"
-            :to="item.ext ? item.path : item.path"
-            class="signedIn-menu"
-          >
-            <template v-if="item.items" v-slot:appendIcon>
-              <v-icon>expand_more</v-icon>
-            </template>
-            <template v-else v-slot:appendIcon>
-              <span></span>
-            </template>
 
-            <template v-slot:activator>
-              <v-list-item>
-                <v-list-item-content>
-                  <v-list-item-title
-                    @click="gotoRoute(item.path, item.ext)"
-                  >
-                  {{ item.title }}
-                  </v-list-item-title>
-                </v-list-item-content>
-              </v-list-item>
-            </template>
-
-            <v-list-item v-for="(subItem, i) in item.items" :key="i">
-              <v-list-item-content>
-                <v-list-item-title class="ml-10">{{ subItem.title }}</v-list-item-title>
-              </v-list-item-content>
-            </v-list-item>
-          </v-list-group>
-        </v-list> -->
-
-        <v-menu :close-on-content-click="!true" bottom offset-y>
+        <!-- Mobile Menu -->
+        <v-menu v-else :close-on-content-click="!true" bottom offset-y min-width="250" max-width="250">
           <template v-slot:activator="{ on }">
             <v-btn plain v-on="on">
               <v-icon color="black">menu</v-icon>
@@ -113,7 +78,7 @@
               v-for="(item, index) in navMenu"
               :key="index"
               :to="item.ext ? item.path : item.path"
-              class="signedIn-menu"
+              class="signedIn-menu mobile-menu"
             >
               <template v-if="item.items" v-slot:appendIcon>
                 <v-icon>expand_more</v-icon>
@@ -123,7 +88,7 @@
               </template>
 
               <template v-slot:activator>
-                <v-list-item>
+                <v-list-item class="sub-item-parent">
                   <v-list-item-content>
                     <v-list-item-title
                       @click="gotoRoute(item.path, item.ext)"
@@ -134,79 +99,15 @@
                 </v-list-item>
               </template>
 
-              <v-list-item v-for="(subItem, i) in item.items" :key="i">
+              <v-list-item v-for="(subItem, i) in item.items" :key="i" class="sub-items">
                 <v-list-item-content>
-                  <v-list-item-title class="ml-10">{{ subItem.title }}</v-list-item-title>
+                  <v-list-item-title class="ml-2">{{ subItem.title }}</v-list-item-title>
                 </v-list-item-content>
               </v-list-item>
             </v-list-group>
           </v-list>
         </v-menu>
-
-        <!-- <div v-else class="d-flex signedIn-menuWrapper primary--text mr-2">
-          <span
-            v-for="(menu, index) in navMenu"
-            :key="index"
-            :to="menu.ext ? menu.path : menu.path"
-            :target="menu.ext ? '_blank' : ''"
-            class="signedIn-menu mr-3"
-            @click="gotoRoute(menu.path, menu.ext)"
-          >
-            <v-icon>{{ menu.icon }}</v-icon>
-            <span>{{ menu.title }}</span>
-          </span>
-        </div> -->
-
-        <!-- <v-menu :close-on-content-click="false" open-on-hover bottom offset-y>
-          <template v-slot:activator="{ on }">
-            <v-icon v-on="on">expand_more</v-icon>
-            <v-icon class="round-avatar">person</v-icon>
-          </template>
-
-          <v-list>
-            <v-list-group
-              v-for="(item, index) in navMenu"
-              :key="index"
-              v-model="item.active"
-            >
-              <template v-slot:activator>
-                <v-list-item @click="$router.push(item.route)">
-                  <v-list-item-content>
-                    <v-list-item-title>{{ item.title }}</v-list-item-title>
-                  </v-list-item-content>
-                </v-list-item>
-              </template>
-
-              <v-list-item v-for="(subItem, i) in item.items" :key="i">
-                <v-list-item-content>
-                  <v-list-item-title>{{ subItem.title }}</v-list-item-title>
-                </v-list-item-content>
-              </v-list-item>
-            </v-list-group>
-          </v-list>
-        </v-menu> -->
-
-        <!-- <v-menu nudge-top="-50">
-          <template v-slot:activator="{ on, attrs }">
-            <v-btn icon v-bind="attrs" v-on="on">
-              <img
-                class="round-avatar mt-2"
-                width="10"
-                :src="require('@/assets/img/avatar.png')"
-              />
-              {{ attrs["aria-expanded"] }}
-              <v-icon v-if="attrs['aria-expanded']">expand_more</v-icon>
-              <v-icon v-else>expand_less</v-icon>
-            </v-btn>
-          </template>
-
-          <v-list>
-            <v-list-item v-for="n in 5" :key="n" @click="() => {}">
-              <v-list-item-title>Option {{ n }}</v-list-item-title>
-            </v-list-item>
-          </v-list>
-        </v-menu> -->
-    </v-app-bar>
+      </v-app-bar>
   </div>
 </template>
 
@@ -232,17 +133,37 @@ export default {
         //   title: "sell", ext: true, path: "https://shop.hermesautos.com"
         // },
         {
-          title: "finance", path: "/finance"
+          title: "CSR", path: "/csr"
         },
         {
-          title: "CSR", path: "/csr"
+          title: "finance", path: "/finance",
+          items: [
+            {
+              title: "Get Prequalified", path: "/protection"
+            },
+            {
+              title: "Learn More About Financing", path: "/protection"
+            }
+          ]
         },
         {
           title: "about", path: "about",
           items: [
             {
+              title: "About Us", path: "/about"
+            },
+            {
               title: "Protection", path: "/protection"
-            }
+            },
+            {
+              title: "How It Works", path: "/how-it-works"
+            },
+            {
+              title: "Customer Review", path: "/how-it-works#reviews"
+            },
+            {
+              title: "Investor Relations", path: "/about"
+            },
           ]
         },
         {title: "contact", path: "/contact"}
@@ -264,11 +185,32 @@ export default {
 .appbar {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px !important;
 }
-.signedIn-menu {
-  font-size: 16px;
+.signedIn-menu, .sub-items {
+  font-size: 13px;
   cursor: pointer;
   color: #000000;
   text-transform: capitalize;
   font-weight: 700;
+  text-transform: uppercase;
+
+  &.desktop-menu {
+    letter-spacing: 1px;
+    margin-left: 18px;
+  }
+  &.mobile-menu {
+    letter-spacing: 1px;
+
+    .sub-item-parent {
+      padding-left: 0;
+    }
+    .v-list-item__content {
+      padding: 0;
+    }
+
+    .v-list-item__title {
+      font-size: 13px;
+      white-space: normal;
+    }
+  }
 }
 </style>
