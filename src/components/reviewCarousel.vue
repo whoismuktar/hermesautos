@@ -1,6 +1,6 @@
 <template>
   <div class="review-carousel">
-      <v-carousel height="150" hide-delimiter-background hide-delimiters>
+      <v-carousel height="150" hide-delimiter-background hide-delimiters cycle>
         <template v-slot:prev="{ on, attrs }">
             <v-btn
             :ripple="false"
