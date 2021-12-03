@@ -1,5 +1,5 @@
 <template>
-  <div class="starred-reviews">
+  <div class="starred-reviews" id="reviews">
     <div class="text-center font-x2b">what our customers are saying</div>
 
     <v-row>

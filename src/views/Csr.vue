@@ -5,14 +5,12 @@
             <div class="csr-hero-title font-x2b text-center">Corporate Social Responsibilities</div>
         </v-img>
       </div>
-
-
       <section class="intro-section">
           <v-container>
               <v-row no-gutters align="center">
                   <v-col cols="6" class="fillHeight px-10 d-flex flex-column justify-center" align-self="center">
                     <h1 class="font-x2b">Building a <br> Better Planet</h1>
-                    <div class="intro-description">Hermes Autos recognizes its impact on the communities in which it operates and believes it has a tremendous opportunity to change the lives of these communities. It aspires to be a trusted partner who contributes to the region's social, economic, and environmental progress. As part of its commitment to creating economic opportunity in the communities where it operates, the Company has volunteered its time, skills, and resources to assist communities and has undertaken a series of locally relevant activities.</div>
+                    <div class="intro-description">Hermes Autos recognizes its impact on the communities in which it operates and believes it has a tremendous opportunity to change the lives of these communities. It aspires to be a trusted partner who contributes to the region's social, economic, and environmental progress. As part of its commitment to creating economic opportunity in the communities where it operates, Hermes Autos has volunteered its time, skills, and resources to assist communities and has undertaken a series of locally relevant activities.</div>
                   </v-col>
 
                   <v-col cols="6" class="fillHeight">
@@ -58,7 +56,7 @@
               <v-row align="center" class="mb-12">
                   <v-col cols="6">
                     <div class="text-center font-x3b mb-4">MONITORING OF CSR PROJECTS</div>
-                    <div>The Board's CSR Committee has developed a "transparent monitoring structure" for the Company's different CSR Projects, Programs, and Activities, which includes conducting periodic impact evaluations of CSR Projects and Programs through independent third-party organizations as needed. Simultaneously, it collects feedback from a variety of recipients of the Company's CSR projects, activities, and programs in order to assess their value.</div>
+                    <div>The Board's CSR Committee has developed a "transparent monitoring structure" for Hermes Autos's different CSR Projects, Programs, and Activities, which includes conducting periodic impact evaluations of CSR Projects and Programs through independent third-party organizations as needed. Simultaneously, it collects feedback from a variety of recipients of Hermes Autos's CSR projects, activities, and programs in order to assess their value.</div>
                   </v-col>
 
                   <v-col cols="6">
@@ -73,7 +71,7 @@
 
                   <v-col cols="6">
                     <div class="text-center font-x3b mb-4">CSR ACTIVITIES/ PROJECTS/PROGRAMS:</div>
-                    <div>The CSR Committee of the Board will prepare a list of CSR Projects, Activities, and Programs that the Company proposes to undertake during the financial year, specifying the modalities of execution in the areas and sectors chosen, as well as implementation schedules for approval by the Board, at the start of each financial year. In our monthly CSR Bulletin, we announce the Company's current CSR activities, projects, and programs, together with their execution modalities and implementation. Other activities, projects, and programs may be undertaken by the Company as it deems fit."</div>
+                    <div>The CSR Committee of the Board will prepare a list of CSR Projects, Activities, and Programs that Hermes Autos proposes to undertake during the financial year, specifying the modalities of execution in the areas and sectors chosen, as well as implementation schedules for approval by the Board, at the start of each financial year. In our monthly CSR Bulletin, we announce Hermes Autos's current CSR activities, projects, and programs, together with their execution modalities and implementation. Other activities, projects, and programs may be undertaken by Hermes Autos as it deems fit."</div>
                   </v-col>
               </v-row>
           </v-container>
