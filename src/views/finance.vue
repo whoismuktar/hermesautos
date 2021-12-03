@@ -31,12 +31,14 @@
           <v-col
             v-for="(img, index) in financePartners"
             :key="index"
-            cols="4"
+            cols="12"
+            sm="2"
           >
             <!-- <span> -->
               <v-img
                 contain
-                width="100%"
+                width="200"
+                max-width="100%"
                 position="center"
                 :src="img"
                 alt="Hermes Autos popular brands"
@@ -149,12 +151,12 @@ export default {
       },
     ],
     financePartners: [
-      require("../assets/img/pic.png"),
-      require("../assets/img/pic.png"),
-      require("../assets/img/pic.png"),
-      require("../assets/img/pic.png"),
-      require("../assets/img/pic.png"),
-      require("../assets/img/pic.png"),
+      require("../assets/img/zenith_bank.png"),
+      require("../assets/img/copart.png"),
+      require("../assets/img/IAAI.jpeg"),
+      require("../assets/img/MANHEIM.png"),
+      require("../assets/img/Grimaldi_lines.png"),
+      require("../assets/img/Msc.jpeg"),
     ],
   }),
 };
