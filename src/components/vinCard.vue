@@ -206,7 +206,7 @@ export default {
       amount: 100000, // in kobo
       vin: "WDDHF8HB2BA296633",
       loading: false,
-      showDialog: !false,
+      showDialog: false,
       fullReportActive: false,
       vinCheckSuccessful: true,
       step: 1,
