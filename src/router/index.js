@@ -52,7 +52,19 @@ const routes = [
   {
     path: '/csr',
     name: 'csr',
-    component: () => import('../views/Csr.vue')
+    component: () => import('../views/Csr.vue'),
+    meta: {
+      customUpperFooter: 'about'
+    }
+  },
+  {
+    path: '/electric-vehicle',
+    name: 'ev',
+    alias: ['/ev', 'electric-vehicles'],
+    component: () => import('../views/Csr.vue'),
+    meta: {
+      customUpperFooter: 'about'
+    }
   },
   {
     path: '*',
