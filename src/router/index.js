@@ -58,6 +58,11 @@ const routes = [
     }
   },
   {
+    path: '/import-duties',
+    name: 'importDuties',
+    component: () => import('../views/importDuties.vue')
+  },
+  {
     path: '/electric-vehicle',
     name: 'ev',
     alias: ['/ev', 'electric-vehicles'],
