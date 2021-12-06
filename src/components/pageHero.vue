@@ -11,7 +11,7 @@
                 <div class="font-x5 _subtitle">{{ subtitle }}</div>
 
                 <vin-card v-if="vinCard" />
-                <v-btn v-if="cta" depressed color="primary" class="hero-cta mt-4">{{ cta }}</v-btn>
+                <v-btn v-if="cta" depressed color="primary" class="hero-cta mt-4" :to="ctaAction">{{ cta }}</v-btn>
               </div>
             </div>
           </v-col>

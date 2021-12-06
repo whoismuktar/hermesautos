@@ -186,7 +186,7 @@ export default {
             path: "tel:13054248922",
           },
           {
-            title: "faq",
+            title: "FAQ",
             path: "faq",
           },
           {

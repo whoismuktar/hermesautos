@@ -136,6 +136,9 @@ export default {
           title: "CSR", path: "/csr"
         },
         {
+          title: "Check Import Duty", path: "/import-duties"
+        },
+        {
           title: "finance", path: "/finance",
           items: [
             {

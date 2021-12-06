@@ -55,8 +55,6 @@ export default {
     } else {
       this.details = this.footerOptions.filter((f) => f.isDefault)[0]
     }
-
-    console.log(this.details);
   }
 
 }
