@@ -3,7 +3,7 @@ import axios from "axios";
 let instance = axios.create();
 
 
-instance.defaults.baseURL = process.env.NODE_ENV == "development" ? "http://localhost:5101/api/v1" : "api/hermesautos.com/api/v1";
+instance.defaults.baseURL = process.env.NODE_ENV == "development" ? "http://localhost:5101/api/v1" : "https://api.hermesautos.com/api/v1";
 console.log(instance.defaults.baseURL);
 
 // Do something before request is sent
