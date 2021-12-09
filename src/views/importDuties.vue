@@ -18,7 +18,6 @@
                 <v-autocomplete
                 v-model="brand"
                 :loading="brandLoading"
-                :search-input.sync="brand"
                 :items="allCarBrands"
                 cache-items
                 class="mx-4"
@@ -36,7 +35,6 @@
                 <v-autocomplete
                 v-model="model"
                 :loading="modelLoading"
-                :search-input.sync="model"
                 :items="allSelectedModels"
                 class="mx-4"
                 flat
@@ -54,7 +52,6 @@
                 <v-autocomplete
                 v-model.number="year"
                 :loading="yearLoading"
-                :search-input.sync="year"
                 :items="allSelectedYears"
                 cache-items
                 class="mx-4"
