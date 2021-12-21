@@ -1,5 +1,5 @@
 <template>
-  <div class="import-duties">
+  <div class="car-valuation">
     <page-hero
       :carImg="hero.carImg"
       :intro="hero.intro"
@@ -96,7 +96,7 @@ export default {
             hero: {
             carImg: require("../assets/img/car-3.png"),
             intro: "IMPORT your vehicles with Hermes autos",
-            title: "Check official Import Duty Rates",
+            title: "Check official Car Valuation",
             subtitle:
                 "Check below for the official custom duty rate for importing cars into teh country.",
             cta: "Contact Us",
@@ -111,54 +111,28 @@ export default {
             model: "",
             brands: [],
             cost: null,
-            states: [
-                'Virgin Island',
-                'Virginia',
-                'Washington',
-                'West Virginia',
-                'Wisconsin',
-                'Wyoming',
-            ],
         }
     },
     watch: {
-        // search (val) {
-        //     this.brand = 
-        //     // val && val !== this.brand && this.getImportDuties()
-        // },
         brand(val) {
-            // console.log(val);
             if (val) {
                 // val && val !== this.select && this.querySelections(val)
                 this.getSelectedModels()
             }
         },
         year(val) {
-            // console.log(val);
             if (val) {
-                // val && val !== this.select && this.querySelections(val)
-                this.getImportDuties()
+                this.getCarValuation()
             }
         }
     },
     methods: {
-        querySelections (v) {
-            console.log("v:", v);
-            this.loading = true
-            // Simulated ajax query
-            setTimeout(() => {
-                this.brands = this.states.filter(e => {
-                return (e || '').toLowerCase().indexOf((v || '').toLowerCase()) > -1
-                })
-                this.loading = false
-            }, 500)
-        },
-        async getImportDuties() {
+        async getCarValuation() {
             const brand = this.brand;
             const year = this.year || "";
             const model = this.model || "";
 
-            await this.$store.dispatch('api/getImportDutiesSheet', { brand, year, model }).then((response)=> {
+            await this.$store.dispatch('api/getCarValuationSheet', { brand, year, model }).then((response)=> {
                 console.log("response:", response);
                 if (!this.model) {
                     this.brands = response.data
@@ -187,7 +161,7 @@ export default {
             this.yearLoading = true;
             await this.$store.dispatch("api/getSelectedYears", { brand: this.brand }).then(() => {
                 this.yearLoading = false;
-                // this.getImportDuties()
+                // this.getCarValuation()
             })
         },
     },
