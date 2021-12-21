@@ -20,7 +20,7 @@
                   contain
                   width="200"
                   position="center"
-                  :src="require('../assets/img/pic.png')"
+                  :src="require('../assets/img/check-computer.jpeg')"
                   alt="Hermes Autos popular brands"
                 ></v-img
               ></span>
@@ -114,7 +114,7 @@
                   contain
                   width="200"
                   position="center"
-                  :src="require('../assets/img/pic.png')"
+                  :src="require('../assets/img/handshake.jpeg')"
                   alt="Hermes Autos popular brands"
                 ></v-img
               ></span>
@@ -187,7 +187,7 @@
                   contain
                   width="200"
                   position="center"
-                  :src="require('../assets/img/pic.png')"
+                  :src="require('../assets/img/del-car.jpeg')"
                   alt="Hermes Autos popular brands"
                 ></v-img
               ></span>
@@ -305,7 +305,7 @@
                   contain
                   width="200"
                   position="center"
-                  :src="require('../assets/img/pic.png')"
+                  :src="require('../assets/img/get-quote.jpeg')"
                   alt="Hermes Autos popular brands"
                 ></v-img
               ></span>
@@ -366,7 +366,7 @@
                   contain
                   width="200"
                   position="center"
-                  :src="require('../assets/img/pic.png')"
+                  :src="require('../assets/img/make-payment.jpeg')"
                   alt="Hermes Autos popular brands"
                 ></v-img
               ></span>
@@ -427,7 +427,7 @@
                   contain
                   width="200"
                   position="center"
-                  :src="require('../assets/img/pic.png')"
+                  :src="require('../assets/img/pay-out.jpeg')"
                   alt="Hermes Autos popular brands"
                 ></v-img
               ></span>

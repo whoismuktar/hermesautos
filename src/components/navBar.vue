@@ -29,13 +29,13 @@
             :key="index"
             :to="menu.ext ? menu.path : menu.path"
             :target="menu.ext ? '_blank' : ''"
-            class="signedIn-menu mr-3 desktop-menu"
+            class="signedIn-menu mr-3 desktop-menu hover-underline-animation"
             @click="gotoRoute(menu.path, menu.ext)"
           >
             <span v-if="!menu.items">{{ menu.title }}</span>
 
             <!-- <v-menu offset-y> -->
-            <v-menu nudge-top="-7" v-else :close-on-content-click="!true" bottom offset-y>
+            <v-menu nudge-top="2" v-else :close-on-content-click="!true" bottom offset-y open-on-hover>
               <template v-slot:activator="{ on }">
                 <v-btn
                   dark
@@ -52,7 +52,7 @@
                 <v-list-tile
                   v-for="(sub, i) in menu.items"
                   :key="i"
-                  class="pa-2 sub-items"
+                  class="pa-2 sub-items hover-underline-animation"
                   @click="gotoRoute(sub.path, sub.ext)"
                 >
                   <v-list-tile-title class="cursorMe px-3">
@@ -78,7 +78,7 @@
               v-for="(item, index) in navMenu"
               :key="index"
               :to="item.ext ? item.path : item.path"
-              class="signedIn-menu mobile-menu"
+              class="signedIn-menu mobile-menu hover-underline-animation"
             >
               <template v-if="item.items" v-slot:appendIcon>
                 <v-icon>expand_more</v-icon>
@@ -136,7 +136,7 @@ export default {
           title: "CSR", path: "/csr"
         },
         {
-          title: "Check Import Duty", path: "/import-duties"
+          title: "Check Car Valuation", path: "/car-valuation"
         },
         {
           title: "finance", path: "/finance",
@@ -162,7 +162,7 @@ export default {
               title: "How It Works", path: "/how-it-works"
             },
             {
-              title: "Customer Review", path: "/how-it-works#reviews"
+              title: "Customer Review", path: "/customer-reviews"
             },
             {
               title: "Investor Relations", path: "/about"
@@ -195,6 +195,10 @@ export default {
   text-transform: capitalize;
   font-weight: 700;
   text-transform: uppercase;
+
+  &:hover {
+    color: var(--v-primary-base);
+  }
 
   &.desktop-menu {
     letter-spacing: 1px;

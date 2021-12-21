@@ -26,7 +26,10 @@ const routes = [
   {
     path: '/finance',
     name: 'finance',
-    component: () => import('../views/finance.vue')
+    component: () => import('../views/finance.vue'),
+    meta: {
+      customUpperFooter: 'about'
+    }
   },
   {
     path: '/protection',
@@ -36,18 +39,19 @@ const routes = [
   {
     path: '/how-it-works',
     name: 'howItWorks',
-    component: () => import('../views/howItWorks.vue')
-  },
-  {
-    path: '/reviews',
-    name: 'howItWorksreviews',
-    component: () => import('../views/reviews.vue')
+    component: () => import('../views/howItWorks.vue'),
+    meta: {
+      customUpperFooter: 'about'
+    }
   },
   {
     path: '/contact',
     alias: ["/contact-us"],
     name: 'contact',
-    component: () => import('../views/contact.vue')
+    component: () => import('../views/contact.vue'),
+    meta: {
+      customUpperFooter: 'about'
+    }
   },
   {
     path: '/csr',
@@ -55,18 +59,27 @@ const routes = [
     component: () => import('../views/Csr.vue'),
     meta: {
       customUpperFooter: 'about'
-    }
+    },
   },
   {
-    path: '/import-duties',
-    name: 'importDuties',
-    component: () => import('../views/importDuties.vue')
+    path: '/car-valuation',
+    name: 'carValuation',
+    component: () => import('../views/carValuation.vue')
   },
   {
     path: '/electric-vehicle',
     name: 'ev',
-    alias: ['/ev', 'electric-vehicles'],
+    alias: ['/ev', '/electric-vehicles'],
     component: () => import('../views/Csr.vue'),
+    meta: {
+      customUpperFooter: 'about'
+    }
+  },
+  {
+    path: '/customer-reviews',
+    name: 'customerReview',
+    alias: ['/customer-review', '/reviews'],
+    component: () => import('../views/reviews.vue'),
     meta: {
       customUpperFooter: 'about'
     }

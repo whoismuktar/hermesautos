@@ -20,6 +20,7 @@
                 </v-col>
 
                 <v-col cols="12" sm="7" class="px-10">
+                    {{ reasoner }}
                     <v-form id="contact-form" class="">
                         <v-row>
                             <v-col cols="12" sm="6">
@@ -59,6 +60,17 @@
                             </v-col>
 
                             <v-col cols="12">
+                                <v-select
+                                    v-model="reason"
+                                    :rules="[rules.required]"
+                                    label="Contact Reason"
+                                    :items="reasons"
+                                    :menu-props="{offsetY: true}"
+                                    hide-details="auto"
+                                ></v-select>
+                            </v-col>
+
+                            <v-col cols="12">
                             <v-textarea
                                 v-model="message"
                                 :rules="[rules.required]"
@@ -87,98 +99,15 @@
             </v-row>
         </v-container>
       </div>
-
-    <!-- <v-container class="form-container">
-        <v-container
-            class="d-flex flex-column justify-center text-center"
-            v-if="messageSuccess == true && messageFailed == false"
-        >
-            <v-icon size="250" color="accent">check_circle</v-icon>
-
-            <h1>Message Sent</h1>
-            <p class="my-5 that-green-color">
-            Your message has been successfully sent. A member of our team would
-            get in touch with you ASAP!
-            </p>
-        </v-container>
-        <v-container
-            class="d-flex flex-column justify-center text-center"
-            v-if="messageFailed == true && messageSuccess == false"
-        >
-            <v-icon size="250" color="red">error</v-icon>
-
-            <h1>Oops!</h1>
-            <p class="my-5 that-green-color">
-            We had an issue sending your message over. Please try again later.
-            </p>
-        </v-container>
-        <v-container v-if="messageSuccess == false && messageFailed == false">
-            <v-row class="justify-center">
-            <v-col cols="11" sm="8" md="6">
-                <v-form id="contact-form" class="that-green-color">
-                    <v-row>
-                        <v-col cols="12" sm="12">
-                        <v-text-field
-                            v-model="fullName"
-                            :rules="[rules.required]"
-                            class="my-4"
-                            label="Your Name"
-                            height="40"
-                            outlined
-                        ></v-text-field>
-                        <v-text-field
-                            v-model="email"
-                            class="my-4"
-                            :rules="[rules.required, rules.email]"
-                            label="Your Email"
-                            height="40"
-                            outlined
-                        ></v-text-field>
-                        <v-text-field
-                            v-model="phone"
-                            class="my-4"
-                            :rules="[rules.required, rules.phoneNumber]"
-                            label="Phone No."
-                            height="40"
-                            outlined
-                        ></v-text-field>
-                        <v-textarea
-                            v-model="message"
-                            :rules="[rules.required]"
-                            class="my-4"
-                            label="Your Details"
-                            height="150"
-                            outlined
-                        ></v-textarea>
-                        <v-btn
-                            @click="submitContact"
-                            :loading="sendLoader"
-                            class="my-4"
-                            label="Submit"
-                            color="accent"
-                            height="50"
-                            width="100%"
-                        >
-                            <span class="text-capitalize neueplak-regular"
-                            >Submit</span
-                            >
-                        </v-btn>
-                        </v-col>
-                    </v-row>
-                </v-form>
-            </v-col>
-            </v-row>
-        </v-container>
-    </v-container> -->
-  </div>
+    </div>
 </template>
 
 <script>
 import SocialIcons from '../components/socialIcons';
 export default {
-    components: {
-        SocialIcons
-    },
+  components: {
+    SocialIcons
+  },
   data() {
     return {
       sendLoader: false,
@@ -186,7 +115,8 @@ export default {
       lastName: "",
       email: "",
       phone: "",
-      details: "",
+      reason: "",
+      message: "",
       messageFailed: false,
       messageSuccess: false,
       rules: {
@@ -211,6 +141,15 @@ export default {
       }
     };
   },
+  computed: {
+    reasons() {
+        const reasons = ["General", "Vacancy", "Car Import", "Procure Electric Vehicle"]
+        return reasons
+    },
+    reasoner() {
+        return this.$route.params
+    }
+  },
   methods: {
     submitContact() {
       this.sendLoader = true;
@@ -219,6 +158,7 @@ export default {
         lastName: this.lastName,
         email: this.email,
         phone: this.phone,
+        reason: this.reason,
         message: this.message
       };
       console.log(body);
@@ -243,6 +183,13 @@ export default {
     //     });
     }
   },
+  created() {
+    const { reason } = this.$route.params
+    this.reason = reason || ""
+
+    console.log("from params:", reason);
+    console.log("reasons", this.reason);
+  }
 };
 </script>
 

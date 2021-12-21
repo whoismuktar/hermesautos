@@ -55,7 +55,10 @@ export default {
         title: "We Are Hiring",
         subtitle: "Want to join the team?",
         cta: "View Careers At Hermes Autos",
-        ctaAction: "",
+        ctaAction: "contact",
+        params: {
+          reason: "Vacancy"
+        }
       },
       team: [
         {
