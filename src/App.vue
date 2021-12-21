@@ -15,6 +15,16 @@ export default {
     navBar,
     appFooter
   },
+  watch: {
+    customUpperFooter(val) {
+      console.log("APP footer 2: ", val);
+    }
+  },
+  computed: {
+    customUpperFooter() {
+      return this.$route.meta.customUpperFooter
+    }
+  }
 }
 </script>
 
