@@ -1,10 +1,20 @@
 <template>
   <div class="csr pb-12">
-      <div class="hero mb-10">
-        <v-img :src="require('../assets/img/csr1.jpeg')" width="100%" height="500" class="csr-hero-img allChildrenCenter">
-            <div class="csr-hero-title font-x2b text-center">Corporate Social Responsibilities</div>
-        </v-img>
-      </div>
+      <v-carousel height="60vh" hide-delimiter-background hide-delimiters cycle>
+        <v-carousel-item
+            v-for="(slide, index) in csrSlides"
+            :key="index"
+        >
+
+            <v-sheet
+            height="100%"
+            tile
+            class="d-flex flex-column justify-center align-center"
+            >
+                <v-img :src="slide.img" width="100%" height="70%"></v-img>
+            </v-sheet>
+        </v-carousel-item>
+      </v-carousel>
       <section class="intro-section">
           <v-container>
               <v-row no-gutters align="center">
@@ -81,7 +91,24 @@
 
 <script>
 export default {
-
+    data() {
+        return {
+            csrSlides: [
+                {
+                    img: require('../assets/img/csr-4.jpg')
+                },
+                {
+                    img: require('../assets/img/csr-5.jpg')
+                },
+                {
+                    img: require('../assets/img/csr-8.jpg')
+                },
+                {
+                    img: require('../assets/img/csr-12.jpg')
+                },
+            ]
+        }
+    }
 }
 </script>
 

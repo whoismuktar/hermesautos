@@ -7,7 +7,7 @@
             <div class="heroHeight d-flex align-center">
               <div>
                 <h4 class="text-uppercase mb-4 _intro">{{ intro }}</h4>
-                <h2 class="font-x2b _title">{{ title }}</h2>
+                <h2 class="font-x2b _title" v-html="title"></h2>
                 <div class="font-x5 _subtitle">{{ subtitle }}</div>
 
                 <vin-card v-if="vinCard" />
@@ -22,7 +22,7 @@
                   AVERAGE REVIEW RATING
               </div>
               <div class="borderLight text-center">
-                <h1 class="font-x2b">{{ avgRating }}</h1>
+                <h1 class="font-x2b">{{ avgRating.toFixed(1) }}</h1>
                 <v-icon v-for="(icon, icI) in parseInt(avgRating)" :key="icI" class="review-star" size="40" color="primary">star</v-icon>
                 <v-icon v-if=" avgRating % 1 != 0" size="40" color="primary">star_half</v-icon>
               </div>

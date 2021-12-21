@@ -21,7 +21,7 @@
     <section>
       <v-container>
         <div class="text-center">
-          <h2 class="mb-4 font-x3b">Our Lending Partners</h2>
+          <h2 class="mb-4 font-x3b">Our Partners</h2>
           <div>
             We work with over a dozen partners to find you a great deal on your ideal automobile at an affordable rate. 
           </div>

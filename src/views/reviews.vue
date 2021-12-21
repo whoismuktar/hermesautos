@@ -3,8 +3,8 @@
     <page-hero :carImg="hero.carImg" :intro="hero.intro" :title="hero.title" :subtitle="hero.subtitle" :cta="hero.cta" :ctaAction="hero.ctaAction" :showRating="true" />
 
     <section class="lightBG">
-        <v-container>
-            <div v-for="(review, index) in reviews" :key="index" class="shadowLight py-5 px-10 mt-10" >
+        <v-container class="px-12">
+            <div v-for="(review, index) in reviews" :key="index" class="shadowLight white py-5 px-10 mt-10" >
                 <div>
                     <v-icon v-for="(icon, icI) in parseInt(review.star)" :key="icI" class="review-star" size="10" color="primary">star</v-icon>
                     <v-icon v-if=" review.star % 1 != 0" size="10" color="primary">star_half</v-icon>
@@ -22,15 +22,11 @@
     </section>
 
     <section>
-      <v-container>
         <how-it-works :howItWorks="howItWorks" />
-      </v-container>
     </section>
 
     <section class="lightBG">
-      <v-container>
-          <footer-question />
-      </v-container>
+        <footer-question />
     </section>
 
   </div>

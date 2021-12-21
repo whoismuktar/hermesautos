@@ -17,7 +17,7 @@ export default {
             })
         },
         // eslint-disable-next-line no-unused-vars
-        async getImportDutiesSheet({ commit, state }, vehicle) {
+        async getCarValuationSheet({ commit, state }, vehicle) {
             return await axios.post("/utils/import-duties/", vehicle)
                 .then(response => response)
         },

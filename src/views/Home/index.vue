@@ -83,7 +83,7 @@
             <div class="allChildrenCenter">
               <v-img
                 cover
-                :src="require('@/assets/img/wrker.jpeg')"
+                :src="require('@/assets/img/car-bg1.jpeg')"
                 position="center"
                 class="round mr-3"
               ></v-img>
@@ -99,13 +99,13 @@
             <div class="allChildrenCenter">
               <v-img
                 cover
-                :src="require('@/assets/img/car-bg1.jpeg')"
+                :src="require('@/assets/img/buy-car.jpeg')"
                 position="center"
                 class="round mr-3"
               ></v-img>
 
               <div>
-                <div class="app-bold">High Quality Cars</div>
+                <div class="app-bold">Buying Made Easy</div>
                 <div>No haggling. No hassles. An easy and efficient car buying process— the way it should be.</div>
               </div>
             </div>
@@ -115,13 +115,13 @@
             <div class="allChildrenCenter">
               <v-img
                 cover
-                :src="require('@/assets/img/car-bg2.jpeg')"
+                :src="require('@/assets/img/del-car.jpeg')"
                 position="center"
                 class="round mr-3"
               ></v-img>
 
               <div>
-                <div class="app-bold">High Quality Cars</div>
+                <div class="app-bold">Delivered Right to You</div>
                 <div>Get your car or truck shipped to your home or a convenient nearby location.</div>
               </div>
             </div>

@@ -45,7 +45,7 @@
                 </div>
             </v-sheet>
         </v-carousel-item>
-        </v-carousel>
+    </v-carousel>
   </div>
 </template>
 

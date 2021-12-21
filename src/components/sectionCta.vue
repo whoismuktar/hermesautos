@@ -1,9 +1,9 @@
 <template>
   <div class="career-cta text-center lightBG py-12">
-      <div class="font-x2b mb-5 __section_title">{{ section.title }}</div>
-      <div class="mb-3 __section_subtitle">{{ section.subtitle }}</div>
+    <div class="font-x2b mb-5 __section_title">{{ section.title }}</div>
+    <div class="mb-3 __section_subtitle">{{ section.subtitle }}</div>
 
-      <v-btn depressed color="primary">{{ section.cta }}</v-btn>
+    <v-btn depressed color="primary" :to="{name: section.ctaAction, params: section.params}">{{ section.cta }}</v-btn>
   </div>
 </template>
 
