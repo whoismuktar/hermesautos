@@ -98,7 +98,7 @@ export default {
             intro: "IMPORT your vehicles with Hermes autos",
             title: "Check official Car Valuation",
             subtitle:
-                "Check below for the official custom duty rate for importing cars into teh country.",
+                "Check below for the official valuation of your vehicle.",
             cta: "Contact Us",
             ctaAction: "/contact",
             },

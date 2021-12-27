@@ -39,7 +39,7 @@ export default new Vuex.Store({
       },
       {
         name: "Tunde Peters",
-        location: "The customer service was outstanding.",
+        location: "Austria",
         review: "My experience with Hermes Autos was as easy as it could be. They provided me with a quote fast, and once I accepted it, the process proceeded along quickly and smoothly. If you're wanting to sell your car, I highly recommend using the service!",
         highlight: "My experience with Hermes Autos was as easy as it could be.",
         star: 4.5,

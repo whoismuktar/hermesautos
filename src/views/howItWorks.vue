@@ -44,7 +44,7 @@
                         On hermesautos.com, you'll find thousands of high-quality, low-mileage vehicles, with new cars and trucks added every week. All of the vehicles are thoroughly inspected, so you can rest assured that you'll be enjoying a fantastic ride.
                       </div>
 
-                      <v-btn
+                      <!-- <v-btn
                         depressed
                         text
                         plain
@@ -52,7 +52,7 @@
                         class="pl-0 mt-4"
                       >
                         <b>Begin your Purchase.</b>
-                      </v-btn>
+                      </v-btn> -->
                     </div>
                   </div>
 
@@ -72,6 +72,7 @@
                         plain
                         color="primary"
                         class="pl-0 mt-4"
+                        to="/about-us"
                       >
                         <b>More about buying with Hermes Autos</b>
                       </v-btn>
