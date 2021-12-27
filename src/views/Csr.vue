@@ -95,10 +95,10 @@ export default {
         return {
             csrSlides: [
                 {
-                    img: require('../assets/img/csr-4.jpg')
+                    img: require('../assets/img/csr4.jpeg')
                 },
                 {
-                    img: require('../assets/img/csr-5.jpg')
+                    img: require('../assets/img/csr-4.jpg')
                 },
                 {
                     img: require('../assets/img/csr-8.jpg')

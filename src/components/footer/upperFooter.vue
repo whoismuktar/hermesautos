@@ -42,7 +42,7 @@ export default {
             "In 2020, Hermes Autos decided to add a digital dimension to its venture and launched an online cross-border automobile buying and selling platform where you can buy a car from America or Europe and have it delivered to your doorstep from anywhere in Africa, in line with the company's vision to expand its business beyond Nigeria...",
           ctaText: "Learn More About Hermes Autos",
           ctaAction: "/about",
-          bgImage: require("../../assets/img/hermes-carbg.jpeg"),
+          bgImage: require("../../assets/img/hermes-carbg-2.jpeg"),
         },
       ],
     };
