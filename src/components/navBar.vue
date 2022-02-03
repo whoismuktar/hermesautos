@@ -49,16 +49,16 @@
                 </v-btn>
               </template>
               <v-list class="d-flex flex-column">
-                <v-list-tile
+                <v-list-item
                   v-for="(sub, i) in menu.items"
                   :key="i"
                   class="pa-2 sub-items hover-underline-animation"
                   @click="gotoRoute(sub.path, sub.ext)"
                 >
-                  <v-list-tile-title class="cursorMe px-3">
+                  <v-list-item-title class="cursorMe px-3">
                     {{ sub.title }}
-                  </v-list-tile-title>
-                </v-list-tile>
+                  </v-list-item-title>
+                </v-list-item>
               </v-list>
             </v-menu>
           </span>
