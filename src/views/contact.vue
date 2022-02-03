@@ -4,6 +4,7 @@
           <div class="font-x2b">Contact</div>
           <div>Any question or remarks? Just write us a message</div>
       </div>
+
       <div class="form-section">
         <v-container class="borderTest white radius20 pa-4">
             <v-row>
@@ -20,8 +21,7 @@
                 </v-col>
 
                 <v-col cols="12" sm="7" class="px-10">
-                    <!-- {{ reasoner }} -->
-                    <v-form id="contact-form" class="">
+                    <v-form id="contact-form" ref="contactForm">
                         <v-row>
                             <v-col cols="12" sm="6">
                                 <v-text-field
@@ -64,6 +64,8 @@
                                     v-model="reason"
                                     :rules="[rules.required]"
                                     label="Contact Reason"
+                                    item-text="title"
+                                    item-value="value"
                                     :items="reasons"
                                     :menu-props="{offsetY: true}"
                                     hide-details="auto"
@@ -74,7 +76,7 @@
                             <v-textarea
                                 v-model="message"
                                 :rules="[rules.required]"
-                                label="Your Details"
+                                label="Message"
                                 height="150"
                                 hide-details="auto"
                             ></v-textarea>
@@ -99,6 +101,19 @@
             </v-row>
         </v-container>
       </div>
+
+      {{ snackbar }} <br>
+      {{ reason }}
+
+      <v-snackbar 
+        v-model="snackbar.status"
+        top 
+        right 
+        :color="snackbar.color"
+        height="60"
+      >
+        {{ snackbar.text }}
+      </v-snackbar>
     </div>
 </template>
 
@@ -111,6 +126,11 @@ export default {
   data() {
     return {
       sendLoader: false,
+      snackbar: {
+        status: false,
+        text: "",
+        color: "",
+      },
       firstName: "",
       lastName: "",
       email: "",
@@ -143,7 +163,24 @@ export default {
   },
   computed: {
     reasons() {
-        const reasons = ["General", "Vacancy", "Car Import", "Procure Electric Vehicle"]
+        const reasons = [
+                {
+                    title: "General",
+                    value: "general"
+                },
+                {
+                    title: "Vacancy",
+                    value: "vacancy"
+                },
+                {
+                    title: "Car Import",
+                    value: "carImport"
+                },
+                {
+                    title: "Procure Electric Vehicle",
+                    value: "ev"
+                },
+            ]
         return reasons
     },
     reasoner() {
@@ -151,44 +188,40 @@ export default {
     }
   },
   methods: {
-    submitContact() {
-      this.sendLoader = true;
-      const body = {
-        firstName: this.firstName,
-        lastName: this.lastName,
-        email: this.email,
-        phone: this.phone,
-        reason: this.reason,
-        message: this.message
-      };
-      console.log(body);
-    //   axios
-    //     .post("/api/v1/contact", body)
-    //     .then(response => {
-    //       this.messageSuccess = true;
+    async submitContact() {
+        const valid = this.$refs.contactForm.validate()
+        if (valid) {
+            this.sendLoader = true;
 
-    //       console.log(response.data);
-    //       console.log(response.headers);
-    //       console.log(response.status);
+            const data = {
+                firstName: this.firstName,
+                lastName: this.lastName,
+                email: this.email,
+                phone: this.phone,
+                reason: this.reason,
+                message: this.message
+            };
 
-    //       this.sendLoader = false;
-    //     })
-    //     .catch(error => {
-    //       this.messageFailed = true;
+            await this.$store.dispatch("api/submitContact", data).then(() => {
+                this.sendLoader = false
+                this.snackbar.color = "green";
+                this.snackbar.text = "Your contact has been successfully submitted";
 
-    //       console.log(error);
-    //       console.log(error.response);
-
-    //       this.sendLoader = false;
-    //     });
+                this.$refs.contactForm.reset()
+            }).catch(() => {
+                this.snackbar.color = "red";
+                this.snackbar.text = "There was a problem with your submission";
+            }).finally(() => {
+                this.snackbar.status = true;
+                this.sendFinished = true;
+                this.sendLoader = false
+            })
+        }
     }
   },
   created() {
     const { reason } = this.$route.params
     this.reason = reason || ""
-
-    console.log("from params:", reason);
-    console.log("reasons", this.reason);
   }
 };
 </script>

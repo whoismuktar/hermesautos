@@ -32,6 +32,10 @@ export default {
         async getSelectedYears({ commit }) {
             return await axios.get("/utils/import-duties/own-years")
                 .then(response => commit("setSelectedYears", response.data.result))
+        },
+        // eslint-disable-next-line no-unused-vars
+        async submitContact({ commit }, data) {
+            return await axios.post("/contact/v1", data)
         }
     },
     mutations: {
