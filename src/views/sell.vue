@@ -29,7 +29,7 @@
       <v-container>
         <div class="font-x2b">Trade In and Save</div>
         <v-row>
-          <v-col cols="6">
+          <v-col cols="12" sm="6">
             <b>How Trading In Works</b>
 
             <ol>
@@ -45,7 +45,7 @@
             </ol>
           </v-col>
 
-          <v-col cols="6">
+          <v-col cols="12" sm="6">
             <b>How You Can Save</b>
 
             <div>

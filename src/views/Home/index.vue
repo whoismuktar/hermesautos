@@ -177,11 +177,11 @@
             </v-card>
           </v-col>
 
-          <v-col cols="6" class="inheritHeight">
+          <v-col cols="12" sm="6" class="inheritHeight">
             <div class="inheritHeight testimonialBG">
               <v-img
                 cover
-                :src="require('@/assets/img/pic.png')"
+                :src="require('@/assets/img/car-int.jpg')"
                 width="500"
                 position="center"
               ></v-img>

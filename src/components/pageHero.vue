@@ -1,10 +1,10 @@
 <template>
   <div>
-    <div class="hero comp-hero heroHeight">
+    <div class="hero comp-hero height100">
       <v-container>
         <v-row no-gutters class="relative" style="z-index: 2">
-          <v-col cols="12" sm="6">
-            <div class="heroHeight d-flex align-center">
+          <v-col cols="12" sm="6" :class="[$vuetify.breakpoint.smAndDown ? 'py-10' : '']" >
+            <div class="d-flex align-center" :class="[$vuetify.breakpoint.smAndDown ? 'height100' : 'heroHeight']">
               <div>
                 <h4 class="text-uppercase mb-4 _intro">{{ intro }}</h4>
                 <h2 class="font-x2b _title" v-html="title"></h2>
@@ -16,8 +16,8 @@
             </div>
           </v-col>
 
-          <v-col cols="6" class="d-flex flex-column justify-end align-end hero-right-meta">
-            <div v-if="showRating" class="align-self-start mt-12">
+          <v-col cols="12" sm="6" class="d-flex flex-column hero-right-meta">
+            <div v-if="showRating" class="align-self-start mt-12" :class="{centerItem: $vuetify.breakpoint.smAndDown}">
               <div class="pa-1 black white--text font-tiny">
                   AVERAGE REVIEW RATING
               </div>
@@ -88,6 +88,10 @@ export default {
 .heroHeight {
   height: 400px;
 
+  @media (max-960px) {
+    height: 100%;
+  }
+
   ._title {
     line-height: 1;
     margin-bottom: 10px;
@@ -117,7 +121,11 @@ export default {
 
     }
     .hero-right-meta {
-        display: none !important;
+        // display: none !important;
+
+        ::v-deep i {
+          color: #ffffff !important;
+        }
     }
 
     ._title {

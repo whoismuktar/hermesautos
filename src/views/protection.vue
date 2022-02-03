@@ -33,7 +33,7 @@
       <v-container>
         <div class="text-center mb-12 font-x2b">Mechanical Coverage</div>
         <v-row>
-          <v-col cols="6">
+          <v-col cols="12" sm="6">
             <div class="font-x3b">Vehicle Service Protection</div>
             <div>
               The majority of Hermes Autos' vehicles are still protected by
@@ -84,7 +84,7 @@
             </div>
           </v-col>
 
-          <v-col cols="6">
+          <v-col cols="12" sm="6">
             <div>
               <div class="pa-2 black white--text">What's Covered</div>
 
@@ -146,7 +146,7 @@
         <div class="text-center mb-12 font-x2b">Everyday Coverage</div>
 
         <v-row>
-          <v-col cols="6">
+          <v-col cols="12" sm="6">
             <div class="font-x3b">Tire & Wheel Protection</div>
 
             <div>
@@ -208,7 +208,7 @@
             </div>
           </v-col>
 
-          <v-col cols="6">
+          <v-col cols="12" sm="6">
             <div class="mt-n12 d-flex">
               <v-img
                 cover
@@ -223,7 +223,7 @@
         </v-row>
 
         <v-row>
-          <v-col cols="6">
+          <v-col cols="12" sm="6">
             <div class="mt-n12 d-flex">
               <v-img
                 cover
@@ -237,7 +237,7 @@
             </div>
           </v-col>
 
-          <v-col cols="6">
+          <v-col cols="12" sm="6">
             <div class="font-x3b">Dent Protection</div>
             <div>
               Optional Damage Protection should be considered well before your
@@ -293,7 +293,7 @@
         </v-row>
 
         <v-row>
-          <v-col cols="6">
+          <v-col cols="12" sm="6">
             <div class="font-x3b">Key Protection</div>
 
             <div>
@@ -326,7 +326,7 @@
             </div>
           </v-col>
 
-          <v-col cols="6">
+          <v-col cols="12" sm="6">
             <div class="mt-n12 d-flex">
               <v-img
                 cover
@@ -341,7 +341,7 @@
         </v-row>
 
         <v-row>
-          <v-col cols="6">
+          <v-col cols="12" sm="6">
             <div class="mt-n12 d-flex">
               <v-img
                 cover
@@ -355,7 +355,7 @@
             </div>
           </v-col>
 
-          <v-col cols="6">
+          <v-col cols="12" sm="6">
             <div class="font-x3b">Windshield Protection</div>
 
             <div>
@@ -404,12 +404,12 @@
     <section>
       <v-container>
         <v-row>
-          <v-col cols="6">
+          <v-col cols="12" sm="6">
             <div>
               <div class="pa-2 black white--text">GAP PROTECTION EXAMPLE</div>
 
               <div class="borderLight text-left">
-                <table>
+                <table class="mb-3">
                   <thead>
                     <tr>
                       <th>2016 BMW 3 Series</th>
@@ -456,7 +456,7 @@
             </div>
           </v-col>
 
-          <v-col cols="6">
+          <v-col cols="12" sm="6">
             <div class="font-x3b">
               Hermes Auto's Guaranteed Asset Protection
             </div>
@@ -500,7 +500,7 @@
 
     <section class="lightBG" id="complimentaryCoverage">
       <v-container>
-        <div class="text-center">
+        <div class="text-center mb-5">
           <div class="font-x3b">Complimentary Coverage</div>
 
           <div class="font-x3b">
@@ -511,7 +511,7 @@
         </div>
 
         <v-row>
-          <v-col cols="6">
+          <v-col cols="12" sm="6">
             <div>
               <b class="black font-tiny pa-1 white--text">INCLUDED STANDARD</b>
             </div>
@@ -555,7 +555,7 @@
             </div>
           </v-col>
 
-          <v-col cols="6">
+          <v-col cols="12" sm="6">
             <div>
               <b class="black font-tiny pa-1 white--text">INCLUDED STANDARD</b>
             </div>
