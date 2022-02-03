@@ -49,7 +49,9 @@ export default {
   },
   computed: {
     getCustomFooter() {
-      return this.$route.meta.customUpperFooter;
+      const {customUpperFooter} = this.$route.meta || 'yy';
+
+      return customUpperFooter
     },
   },
   watch: {
@@ -69,6 +71,10 @@ export default {
         this.details = this.footerOptions.filter((f) => f.isDefault)[0];
       }
     }
+  },
+  created() {
+    this.setFooter()
+    console.log(this.$route.meta);
   }
 };
 </script>
