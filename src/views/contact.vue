@@ -82,6 +82,41 @@
                             ></v-textarea>
                             </v-col>
 
+                            <v-col cols="4">
+                                <div class="captcha">
+                                    <v-text-field
+                                        v-model="digit1"
+                                        disabled
+                                        outlined
+                                        class="captcha_input"
+                                        hide-details=""
+                                    ></v-text-field>
+
+                                    <span class="mx-2">+</span>
+
+                                    <v-text-field
+                                        v-model="digit2"
+                                        disabled
+                                        outlined
+                                        class="captcha_input"
+                                        hide-details
+                                    ></v-text-field>
+
+                                    <span class="mx-2">=</span>
+
+                                    <v-text-field
+                                        v-model.number="answer"
+                                        outlined
+                                        class="captcha_input"
+                                        hide-details
+                                    ></v-text-field>
+                                </div>
+
+                                <div v-if="captchaError" class="red--text mt-3">
+                                    <b class="font-sm">{{ captchaErrorMsg }}</b>
+                                </div>
+                            </v-col>
+
                             <v-col cols="12">
                                 <v-btn
                                     @click="submitContact"
@@ -101,9 +136,6 @@
             </v-row>
         </v-container>
       </div>
-
-      {{ snackbar }} <br>
-      {{ reason }}
 
       <v-snackbar 
         v-model="snackbar.status"
@@ -126,6 +158,12 @@ export default {
   data() {
     return {
       sendLoader: false,
+      digit1: null,
+      digit2: null,
+      answer: null,
+      expected_answer: 0,
+      captchaError: false,
+      captchaErrorMsg: "Captcha failed. Try Again ",
       snackbar: {
         status: false,
         text: "",
@@ -190,7 +228,19 @@ export default {
   methods: {
     async submitContact() {
         const valid = this.$refs.contactForm.validate()
-        if (valid) {
+        const validCaptcha = this.answer === this.expected_answer
+
+        if (!validCaptcha) {
+            this.captchaError = true
+            this.answer = null
+
+            // re-generate captcha
+            return this.generateCaptcha()
+        } else {
+            this.captchaError = false
+        }
+
+        if (valid && validCaptcha) {
             this.sendLoader = true;
 
             const data = {
@@ -217,9 +267,24 @@ export default {
                 this.sendLoader = false
             })
         }
+    },
+    generateCaptcha() {
+        function randomize() {
+            let num = Math.floor(Math.random() * 20)
+
+            return num
+        }
+
+        this.digit1 = randomize()
+        this.digit2 = randomize()
+
+        this.expected_answer = this.digit1 + this.digit2
     }
   },
   created() {
+    //   generate simple math captcha
+    this.generateCaptcha()
+
     const { reason } = this.$route.params
     this.reason = reason || ""
   }
@@ -230,6 +295,23 @@ export default {
 <style lang="scss" scoped>
 .form-section {
     margin: 100px 0;
+}
+
+.captcha {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &_input {
+        width: 33px;
+        height: 33px;
+        padding: 0;
+        font-weight: bold;
+
+        ::v-deep .v-input__slot {
+            min-height: auto !important;
+        }
+    }
 }
 .contact-social {
     margin-top: 40px;
