@@ -7,6 +7,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    shopExt: "https://shop.hermesautos.com/",
     reviewAmount: 4,
     reviews: [
       {
@@ -150,7 +151,7 @@ export default new Vuex.Store({
         star: 4.5,
       },
       {
-        name: " Seyi Lawnrence",
+        name: " Seyi Lawrence",
         location: "USA",
         review: "This is the third time I've used Hermesautos. It's very simple, and they always pay me a fair price for my vehicles. They also provide a wide selection of autos for sale.",
         highlight: "This is the third time I've used Hermesautos. So simple.",
