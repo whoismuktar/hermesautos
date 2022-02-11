@@ -83,6 +83,9 @@ html,body {
 .flipX {
     transform: scaleX(-1);
 }
+.flip320 {
+    transform: rotate(320deg)
+}
 
 section {
     padding-top: 40px;
@@ -190,6 +193,7 @@ hr {
   background-color: var(--v-primary-base);
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
+  z-index: -1;
 }
 
 .hover-underline-animation:hover:after {
