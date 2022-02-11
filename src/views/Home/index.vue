@@ -181,7 +181,7 @@
             <div class="inheritHeight testimonialBG">
               <v-img
                 cover
-                :src="require('@/assets/img/car-int.jpg')"
+                :src="require('@/assets/img/car-int.jpeg')"
                 width="500"
                 position="center"
               ></v-img>
