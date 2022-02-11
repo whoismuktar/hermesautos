@@ -96,6 +96,7 @@
                         plain
                         color="primary"
                         class="pl-0 mt-4"
+                        to="/finance"
                       >
                         <b>More about Financing</b>
                       </v-btn>
@@ -162,16 +163,6 @@
                       <div>
                         We'll either send your documentation to you for signature overnight or email it to you for e-signature (dependent on the requirements of your purchase). Review your paperwork carefully, sign where indicated, and return or complete it within 24 hours. We'll ensure everything looks good once we have it, and then the automobile will be yours. 
                       </div>
-
-                      <v-btn
-                        depressed
-                        text
-                        plain
-                        color="primary"
-                        class="pl-0 mt-4"
-                      >
-                        <b>More about Buying A Car with Heres Autos</b>
-                      </v-btn>
                     </div>
                   </div>
                 </v-timeline-item>
@@ -223,16 +214,6 @@
                       <div>
                         Typically, your vehicle will arrive within 4-6 weeks following your order, though this may take longer in some cases. Your car will be delivered to your home or a convenient location near you.
                       </div>
-
-                      <v-btn
-                        depressed
-                        text
-                        plain
-                        color="primary"
-                        class="pl-0 mt-4"
-                      >
-                        <b>More about Delivery</b>
-                      </v-btn>
                     </div>
                   </div>
 
@@ -245,16 +226,6 @@
                       <div>
                         Your automobile will be delivered with temporary tags that will allow you to drive it right away. Upon delivery, you'll receive an email with information about titling and registration. We file your DMV paperwork for you if you financed your vehicle through Hermesautos.com. 
                       </div>
-
-                      <v-btn
-                        depressed
-                        text
-                        plain
-                        color="primary"
-                        class="pl-0 mt-4"
-                      >
-                        <b>More about Tiles and Registration</b>
-                      </v-btn>
                     </div>
                   </div>
 
@@ -268,7 +239,7 @@
                         It takes more than a lap around the block to get to know your car. You have a week (7 days or 250 miles) to decide if it's the best fit for you.
                       </div>
 
-                      <v-btn
+                      <!-- <v-btn
                         depressed
                         text
                         plain
@@ -276,7 +247,7 @@
                         class="pl-0 mt-4"
                       >
                         <b>MORE ABOUT THE 7-DAY RETURN PERIOD</b>
-                      </v-btn>
+                      </v-btn> -->
                     </div>
                   </div>
 
@@ -342,7 +313,7 @@
                         We'll provide you an instant price for your vehicle that is valid for 7 days or 250 extra miles, whichever comes first. If we can't compute an instant quote, one of our car-buying experts will normally email you a price the same day.
                       </div>
 
-                      <v-btn
+                      <!-- <v-btn
                         depressed
                         text
                         plain
@@ -350,7 +321,7 @@
                         class="pl-0 mt-4"
                       >
                         <b>More about Selling to Hermes Autos</b>
-                      </v-btn>
+                      </v-btn> -->
                     </div>
                   </div>
                 </v-timeline-item>
@@ -403,7 +374,7 @@
                         Our team will work with you to arrange a free pickup from your driveway or a nearby location that is convenient for you (within our coverage region). That's right, there's no charge for pick-up.
                       </div>
 
-                      <v-btn
+                      <!-- <v-btn
                         depressed
                         text
                         plain
@@ -411,7 +382,7 @@
                         class="pl-0 mt-4"
                       >
                         <b>More about Picking Up Your Car</b>
-                      </v-btn>
+                      </v-btn> -->
                     </div>
                   </div>
                 </v-timeline-item>
@@ -502,7 +473,8 @@ export default {
       sectionCta: {
         title: "Ready For Your Next Great Car",
         cta: "Check Out Our Inventory",
-        ctaAction: "",
+        ctaAction: this.$store.state.shopExt,
+        external: true,
       },
     };
   },

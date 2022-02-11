@@ -106,11 +106,11 @@
       </div>
     </section>
 
-    <hr class="mb-12" />
+    <!-- <hr class="mb-12" /> -->
 
-    <section>
+    <!-- <section>
       <store-location />
-    </section>
+    </section> -->
   </div>
 </template>
 
@@ -119,7 +119,7 @@ import pageHero from "../components/pageHero";
 import reviewCarousel from "../components/reviewCarousel";
 import tabView from "../components/tabView";
 import howItWorks from "../components/howItWorks";
-import storeLocation from "../components/storeLocation";
+// import storeLocation from "../components/storeLocation";
 
 export default {
   components: {
@@ -127,7 +127,7 @@ export default {
     pageHero,
     reviewCarousel,
     howItWorks,
-    storeLocation,
+    // storeLocation,
   },
   data: () => ({
     hero: {
@@ -198,7 +198,7 @@ export default {
             "Finalize your purchase, then schedule your delivery or in-store pickup. If you finance with us, Hermes Autos will register your vehicle on your behalf and mail your registration and plates to you, once your state DMV has prepared them.",
         },
       ],
-      media: require("../assets/img/pic.png"),
+      media: require("../assets/img/pay-out.jpeg"),
     },
   }),
 };

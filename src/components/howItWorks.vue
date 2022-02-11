@@ -24,7 +24,7 @@
             </div>
         </div>
         </v-col>
-        <v-col cols="2" class="howItWorksBG-wrapper d-none">
+        <v-col cols="12" sm="2" class="howItWorksBG-wrapper">
         <div class="howItWorksBG">
             <v-img contain width="450" position="center" :src="media" alt="Hermes Autos popular brands"></v-img>
         </div>
@@ -63,6 +63,10 @@ export default {
     left: -190px;
 }
 @media (max-width: 960px) {
+    .howItWorksBG {
+        position: relative;
+        left: unset;
+    }
     .__wrapper {
         width: 100%;
     }

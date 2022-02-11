@@ -22,7 +22,7 @@
     </section>
 
     <section>
-        <how-it-works :howItWorks="howItWorks" />
+        <how-it-works class="mb-12" :howItWorks="howItWorks" />
     </section>
 
     <section class="lightBG">

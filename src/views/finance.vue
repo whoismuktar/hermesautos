@@ -20,7 +20,7 @@
 
     <section>
       <v-container>
-        <div class="text-center">
+        <div class="text-center" id="our-partners">
           <h2 class="mb-4 font-x3b">Our Partners</h2>
           <div>
             We work with over a dozen partners to find you a great deal on your ideal automobile at an affordable rate. 
@@ -52,6 +52,7 @@
     <section>
       <v-container>
         <how-it-works
+          id="how-it-works"
           :title="howItWorks.title"
           :lists="howItWorks.lists"
           :media="howItWorks.media"
@@ -87,7 +88,7 @@ export default {
       subtitle:
         "Financing with Hermes Autos; makes buying the car of your dreams a lot easier. You can explore our exclusive vehicle inventory just for you after pre-qualifying for Hermes Autos Vehicle Finance.",
       cta: "Apply Now",
-      ctaAction: "",
+      ctaAction: "/contact",
     },
     howItWorks: {
       title: "How It Works",
@@ -108,7 +109,7 @@ export default {
             "Finalize your purchase as soon as you accept our Financing Offer. Pay the 30% initial contribution and start driving your dream Car.",
         },
       ],
-      media: require("../assets/img/pic.png"),
+      media: require("../assets/img/pay-out.jpeg"),
     },
     model: 0,
     sellingPoint: [
@@ -140,9 +141,9 @@ export default {
         date: "2010-11-11",
       },
       {
-        author: "Erica Johnson",
+        author: "Kolawole Johnson",
         content: "The vehicle is exactly as stated; the purchasing procedure was straightforward, and the financing options were fantastic.",
-        date: "2008-04-21",
+        date: "2017-04-21",
       },
       {
         author: "Yemi Adebola",
