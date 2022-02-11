@@ -52,7 +52,7 @@
                 <v-list-item
                   v-for="(sub, i) in menu.items"
                   :key="i"
-                  class="pa-2 sub-items hover-underline-animation"
+                  class="sub-items hover-underline-animation"
                   @click="gotoRoute(sub.path, sub.ext)"
                 >
                   <v-list-item-title class="cursorMe px-3">
@@ -142,10 +142,10 @@ export default {
           title: "finance", path: "/finance",
           items: [
             {
-              title: "Get Prequalified", path: "/protection"
+              title: "How Finance Works", path: "/finance#how-it-works"
             },
             {
-              title: "Learn More About Financing", path: "/protection"
+              title: "Our Partners", path: "/finance#our-partners"
             }
           ]
         },
@@ -188,6 +188,7 @@ export default {
 .appbar {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px !important;
 }
+
 .signedIn-menu, .sub-items {
   font-size: 13px;
   cursor: pointer;
@@ -198,6 +199,8 @@ export default {
 
   &:hover {
     color: var(--v-primary-base);
+    position: relative;
+    z-index: 2;
   }
 
   &.desktop-menu {
@@ -218,6 +221,15 @@ export default {
       font-size: 13px;
       white-space: normal;
     }
+  }
+}
+.sub-items {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+
+  .v-list-item__title {
+    font-size: 13px;
   }
 }
 </style>
