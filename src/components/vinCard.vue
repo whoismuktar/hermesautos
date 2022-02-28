@@ -188,6 +188,16 @@
         </div>
       </v-container>
     </v-dialog>
+
+    <v-snackbar 
+      v-model="snackbar.status"
+      top 
+      right 
+      :color="snackbar.color"
+      height="60"
+    >
+      {{ snackbar.text }}
+    </v-snackbar>
   </div>
 </template>
 
@@ -206,6 +216,11 @@ export default {
   },
   data() {
     return {
+      snackbar: {
+        status: false,
+        text: "",
+        color: "",
+      },
       email: "foobar@example.com", // Customer email
       amount: 100000, // in kobo
       // vin: "WDDHF8HB2BA296633",
@@ -342,16 +357,22 @@ export default {
         console.log("Payment closed")
     },
     searchVin() {
+      if (this.vin.length < 1) {
+        this.snackbar.status = true;
+        this.snackbar.color = "red";
+        this.snackbar.text = "VIN can not be empty";
+      }
       this.loading = true;
 
       this.$store.dispatch("api/vinInitCheck", {vin: this.vin}).then((response) => {
         this.showDialog = true;
-        console.log("response:", response);
         this.vinResult = response.data.data
-
-        console.log("vinResult:", this.vinResult);
       }).catch((error) => {
         console.log(error);
+
+        this.snackbar.status = true;
+        this.snackbar.color = "red";
+        this.snackbar.text = error.response.message || "Error decoding VIN";
       }).finally(() => {
         this.loading = false;
       })
