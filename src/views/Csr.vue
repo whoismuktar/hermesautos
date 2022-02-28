@@ -70,7 +70,21 @@
                   </v-col>
 
                   <v-col cols="12" sm="6">
-                    <v-img :src="require('../assets/img/csr4.jpeg')" class="radius20"></v-img>
+                    <v-carousel height="60vh" class="radius20" hide-delimiter-background hide-delimiters cycle>
+                        <v-carousel-item
+                            v-for="(slide, index) in csrSlidesSub1"
+                            :key="index"
+                        >
+
+                            <v-sheet
+                            height="100%"
+                            tile
+                            class="d-flex flex-column justify-center align-center"
+                            >
+                                <v-img :src="slide.img" width="100%" height="70%"></v-img>
+                            </v-sheet>
+                        </v-carousel-item>
+                    </v-carousel>
                   </v-col>
               </v-row>
 
@@ -93,7 +107,7 @@
 export default {
     data() {
         return {
-            csrSlides: [
+            csrSlidesSub1: [
                 {
                     img: require('../assets/img/csr4.jpeg')
                 },
@@ -105,6 +119,17 @@ export default {
                 },
                 {
                     img: require('../assets/img/csr-12.jpg')
+                },
+            ],
+            csrSlides: [
+                {
+                    img: require('../assets/img/csr-sb1-1.jpg')
+                },
+                {
+                    img: require('../assets/img/csr-sb1-2.jpg')
+                },
+                {
+                    img: require('../assets/img/csr-sb1-3.jpg')
                 },
             ]
         }
