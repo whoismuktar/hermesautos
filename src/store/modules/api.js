@@ -5,11 +5,16 @@ export default {
     state: {
         vinPageID: 846291,
         vinPrice: null,
+        vinInitData: {},
         allCarBrands: [],
         allSelectedModels: [],
         allSelectedYears: [],
     },
     actions: {
+        // eslint-disable-next-line no-unused-vars
+        async vinInitCheck(commit, vin) {
+            return await axios.post("/vin/check", vin)
+        },
         vinPage({ commit, state }) {
             return axios.get("/paystack/page/" + state.vinPageID).then((response) => {
                 console.log(response.data);
@@ -39,6 +44,9 @@ export default {
         }
     },
     mutations: {
+        setInitVin(state, data) {
+            state.vinInitData = data
+        },
         setVinPrice(state, price) {
             state.vinPrice = price
         },

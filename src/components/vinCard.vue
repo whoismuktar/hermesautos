@@ -27,7 +27,9 @@
         </v-btn>
         <div v-if="!fullReportActive"  class="vin-result">
           <div class="result-title car-title text-center">
-              2011 Mercedes-Benz E-Class
+              {{ vinResult.ModelYear }}
+              {{ vinResult.Make }} 
+              {{ vinResult.Model }}
           </div>
           <v-card class="vin-summary-card pa-10 pt-12">
             <div class="check-status-msg text-center">
@@ -44,10 +46,12 @@
                 <v-col cols="12" sm="6">
                   <div class="car-brief-info">
                     <h3 class="car-title text-center">
-                      2011 Mercedes-Benz E-Class
+                      {{ vinResult.ModelYear }}
+                      {{ vinResult.Make }} 
+                      {{ vinResult.Model }}
                     </h3>
                     <h3 class="car-title text-center">
-                      WDDHF8HB2BA296633
+                      {{ vinResult.vin }}
                     </h3>
                   </div>
                 </v-col>
@@ -57,8 +61,8 @@
             <div class="vin-summary vin-table">
               <v-row>
                 <v-col cols="12" sm="3" v-for="(d, k) in vinResult" :key="k" class="vin-table-col">
-                  <div class="result-key">{{ k.replace(/_/g,' ') }}</div>
-                  <div class="result-data">{{ d }}</div>
+                  <div class="result-key">{{ k.replace(/([A-Z])/g, ' $1').trim() }}</div>
+                  <div class="result-data">{{ d }}1</div>
                 </v-col>
               </v-row>
             </div>
@@ -204,7 +208,8 @@ export default {
     return {
       email: "foobar@example.com", // Customer email
       amount: 100000, // in kobo
-      vin: "WDDHF8HB2BA296633",
+      // vin: "WDDHF8HB2BA296633",
+      vin: "",
       loading: false,
       showDialog: false,
       fullReportActive: false,
@@ -213,7 +218,8 @@ export default {
       customer: {
         email: "mail@yahoo.com"
       },
-      vinResult: {
+      vinResult: {},
+      vinResult2: {
         year: "2014",
         make: "Toyota",
         model: "Prius V",
@@ -336,8 +342,20 @@ export default {
         console.log("Payment closed")
     },
     searchVin() {
-      // this.loading = true;
-      this.showDialog = true;
+      this.loading = true;
+
+      this.$store.dispatch("api/vinInitCheck", {vin: this.vin}).then((response) => {
+        this.showDialog = true;
+        console.log("response:", response);
+        this.vinResult = response.data.data
+
+        console.log("vinResult:", this.vinResult);
+      }).catch((error) => {
+        console.log(error);
+      }).finally(() => {
+        this.loading = false;
+      })
+
     },
   }
 }
