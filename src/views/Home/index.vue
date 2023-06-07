@@ -90,7 +90,10 @@
 
               <div>
                 <div class="app-bold">High Quality Cars</div>
-                <div>Multiple inspections. Free CARFAX® history report. Free limited warranty.</div>
+                <div>
+                  Multiple inspections. Free CARFAX® history report. Free
+                  limited warranty.
+                </div>
               </div>
             </div>
           </v-col>
@@ -106,7 +109,10 @@
 
               <div>
                 <div class="app-bold">Buying Made Easy</div>
-                <div>No haggling. No hassles. An easy and efficient car buying process— the way it should be.</div>
+                <div>
+                  No haggling. No hassles. An easy and efficient car buying
+                  process— the way it should be.
+                </div>
               </div>
             </div>
           </v-col>
@@ -122,14 +128,23 @@
 
               <div>
                 <div class="app-bold">Delivered Right to You</div>
-                <div>Get your car or truck shipped to your home or a convenient nearby location.</div>
+                <div>
+                  Get your car or truck shipped to your home or a convenient
+                  nearby location.
+                </div>
               </div>
             </div>
           </v-col>
         </v-row>
 
         <div class="text-center my-10">
-          <v-btn depressed tile large color="primary" href="http://shop.hermesautos.com">
+          <v-btn
+            depressed
+            tile
+            large
+            color="primary"
+            href="http://shop.hermesautos.com"
+          >
             <b>SHOP VEHICLES</b>
           </v-btn>
         </div>
@@ -208,7 +223,15 @@
         </div>
 
         <div class="my-5">
-          <v-img :src="require('@/assets/img/video.jpeg')" height="600"></v-img>
+          <iframe
+            width="100%"
+            height="600"
+            src="https://www.youtube.com/embed/SuRnpewWZNs"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
         </div>
       </v-container>
     </section>
