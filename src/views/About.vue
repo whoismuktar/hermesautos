@@ -62,21 +62,21 @@ export default {
       },
       team: [
         {
-          fullName: "Lawrence Jibowu",
+          fullName: "Alex Obinyan",
           position: "Director",
-          about: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis officiis soluta harum. Excepturi similique rerum mollitia deserunt voluptatem itaque sed quod quibusdam tempora suscipit! Consequatur voluptas quaerat culpa nobis asperiores!",
+          about: "Alex Obinyan is highly accomplished director in the automotive industry with over two decades of experience. He has played a pivotal role in shaping the success of leading different auto car companies, leading cross-functional teams in the development of cutting-edge vehicle models. With a keen understanding of market dynamics and a passion for innovation, Alex has driven remarkable growth and profitability for the company. His collaborative leadership style and strategic vision have earned him recognition as a key influencer in the industry.",
           avatar: require('../assets/img/avatar.png'),
         },
         {
-          fullName: "Jelil Kabiyesi",
+          fullName: "Sarah Ejodamen",
           position: "Co-Founder",
-          about: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis officiis soluta harum. Excepturi similique rerum mollitia deserunt voluptatem itaque sed quod quibusdam tempora suscipit! Consequatur voluptas quaerat culpa nobis asperiores!",
+          about: "Sarah Ejodamen is a dynamic co-founder of Hermesautos, a prominent automotive company. With her entrepreneurial spirit and unwavering dedication, Sarah has been instrumental in building the company from its inception. Her deep knowledge of the automotive sector, coupled with her strong business acumen, has led to the successful establishment of Hermesautos as a market leader. Sarah's innovative mindset and ability to navigate industry challenges have been vital in driving the company's growth and fostering strategic partnerships.",
           avatar: require('../assets/img/avatar.png'),
         },
         {
-          fullName: "Tom Holland",
+          fullName: "Thomas Bridges",
           position: "CEO / Co-Founder",
-          about: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis officiis soluta harum. Excepturi similique rerum mollitia deserunt voluptatem itaque sed quod quibusdam tempora suscipit! Consequatur voluptas quaerat culpa nobis asperiores!",
+          about: "Thomas Bridges is an accomplished CEO and the co-founder of Hermesautos, a renowned automotive company. With a visionary approach and extensive industry expertise, Thomas has played a pivotal role in shaping the company's trajectory since its inception. His commitment to excellence and customer satisfaction has driven the company's success and earned it a reputation for delivering cutting-edge products and services. Under his guidance, Hermesautos continues to thrive as a driving force in the industry, setting new standards for quality and performance.",
           avatar: require('../assets/img/avatar.png'),
         }
       ]
