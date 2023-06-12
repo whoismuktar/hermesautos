@@ -5,7 +5,7 @@
       'background-image': `url(${details.bgImage})`,
     }"
   >
-    <div class="_wrapper">
+    <v-container class="_wrapper">
       <h2 class="relative">{{ details.header }}</h2>
       <p class="relative">
         {{ details.content }}
@@ -14,7 +14,7 @@
       <v-btn depressed color="primary" :to="details.ctaAction">{{
         details.ctaText
       }}</v-btn>
-    </div>
+    </v-container>
   </div>
 </template>
 
