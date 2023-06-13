@@ -765,7 +765,7 @@ export default {
         subtitle:
           "Hermes Autos's mission is to help you find your drive. Please make a pit stop here to learn more about the terms and policies that govern your use of our products and services.",
         cta: "Find Your Car",
-        ctaAction: "",
+        ctaAction: "https://shop.hermesautos.com",
       },
     };
   },
