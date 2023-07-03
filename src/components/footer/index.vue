@@ -53,7 +53,7 @@
               <ul>
                 <li class="grey--text app-bold mb-2">{{ menu1.title }}</li>
                 <li v-for="(menu1, index) in menu1.items" :key="index">
-                  <a :href="menu1.path">
+                  <a :href="menu1.path" :target="menu1.ext ? '_blank' : ''">
                     <span class="white--text text-capitalize">{{
                       menu1.title
                     }}</span>
@@ -145,7 +145,8 @@ export default {
         items: [
           {
             title: "buy",
-            path: "/buy",
+            ext: true,
+            path: "https://shop.hermesautos.com",
           },
           {
             title: "sell/trade",
