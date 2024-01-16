@@ -283,7 +283,7 @@ export default {
           attr: "Finance",
           title: "Get a Competitive Rate",
           content:
-            "Hermes Autos has strategic relationships with partners like Chase, Santander, and Ally to secure the best financing for you.",
+          "Hermes Autos has strategic relationships with partners to secure the best financing for you.",
         },
         {
           attr: "Deliver to you",
