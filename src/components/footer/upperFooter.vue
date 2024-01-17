@@ -23,7 +23,7 @@ export default {
   data() {
     return {
       details: {},
-      customFooter: '',
+      customFooter: "",
       footerOptions: [
         {
           isDefault: true,
@@ -31,8 +31,17 @@ export default {
           header: "Electric Vehicles",
           content:
             "Our hundreds of team members are helping Hermes Autos revolutionize the way people buy, sell, and trade in EVs. Count on us to make your next Electric Vehicle buying experience the best you’ve ever had.",
-          ctaText: "Learn More About EVs",
-          ctaAction: "/electric-vehicles",
+          ctaText: "Coming Soon",
+          ctaAction: "#",
+          bgImage: require("../../assets/img/ev.jpeg"),
+        },
+        {
+          name: "ev",
+          header: "Our Customer Reviews",
+          content:
+            "To the norht and beyond. our customsers have been please with our auto sales and deliveries as well as our tailored consultations to meet respective client needs.",
+          ctaText: "View Reviews",
+          ctaAction: "/customer-reviews",
           bgImage: require("../../assets/img/ev.jpeg"),
         },
         {
@@ -49,35 +58,31 @@ export default {
   },
   computed: {
     getCustomFooter() {
-      const {customUpperFooter} = this.$route.meta || 'yy';
+      const { customUpperFooter } = this.$route.meta || "";
 
-      return customUpperFooter
+      return customUpperFooter;
     },
   },
   watch: {
-    getCustomFooter(val) {
-      this.setFooter(val)
-
-    }
+    $route() {
+      this.randomizeFooterContent();
+    },
   },
   methods: {
-    setFooter(val) {
-      console.log("val", val);
-      if (val) {
-        this.details = this.footerOptions.filter(
-          (f) => f.name === val
-        )[0];
-      } else {
-        this.details = this.footerOptions.filter((f) => f.isDefault)[0];
-      }
-    }
+    randomizeFooterContent() {
+      console.log(this.customUpperFooter)
+
+      const randomContent = this.customUpperFooter
+        ? this.footerOptions.find((f) => f.name === this.customUpperFooter)
+        : this.footerOptions[
+            Math.floor(Math.random() * this.footerOptions.length)
+          ];
+
+      console.log(randomContent);
+      this.details = randomContent;
+    },
   },
-  created() {
-    this.setFooter()
-    console.log(this.$route.meta);
-  }
 };
 </script>
 
-<style>
-</style>
+<style></style>
