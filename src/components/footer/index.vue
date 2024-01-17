@@ -150,7 +150,7 @@ export default {
           },
           {
             title: "sell/trade",
-            path: "/sell-trade",
+            path: "/sell",
           },
           {
             title: "finance",
@@ -205,7 +205,7 @@ export default {
           },
           {
             title: "careers",
-            path: "/careers",
+            path: "/contact?reason=vacancy",
           },
           {
             title: "do not sell my info",

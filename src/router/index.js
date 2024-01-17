@@ -96,6 +96,30 @@ const routes = [
     component: () => import('../views/privacyPolicy.vue')
   },
   {
+    path: '/do-not-sell-my-info',
+    name: 'dpNotSellMyInfo',
+    component: () => import('../components/404.vue'),
+    meta: {
+      pending: true
+    }
+  },
+  {
+    path: '/investor-relation',
+    name: 'investorRelation',
+    component: () => import('../components/404.vue'),
+    meta: {
+      pending: true
+    }
+  },
+  {
+    path: '/faq',
+    name: 'faq',
+    component: () => import('../components/404.vue'),
+    meta: {
+      pending: true
+    }
+  },
+  {
     path: '*',
     name: '404',
     component: () => import('../components/404.vue')
