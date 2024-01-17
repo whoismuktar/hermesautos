@@ -285,8 +285,9 @@ export default {
     //   generate simple math captcha
     this.generateCaptcha()
 
-    const { reason } = this.$route.params
-    this.reason = reason || ""
+    const paramReason = this.$route.params.reason
+    const queryReason = this.$route.query.reason
+    this.reason = paramReason || queryReason || ""
   }
 };
 </script>
