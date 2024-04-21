@@ -9,122 +9,123 @@ VueRouter.prototype.push = function push(location) {
 Vue.use(VueRouter)
 
 const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: () => import('../views/Home/')
-  },
-  {
-    path: '/about',
-    name: 'About',
-    alias: ["/about-us"],
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  },
-  {
-    path: '/sell',
-    name: 'Finance',
-    component: () => import('../views/sell.vue')
-  },
-  {
-    path: '/finance',
-    name: 'finance',
-    component: () => import('../views/finance.vue'),
-    meta: {
-      customUpperFooter: 'about'
-    }
-  },
-  {
-    path: '/protection',
-    name: 'protection',
-    component: () => import('../views/protection.vue')
-  },
-  {
-    path: '/how-it-works',
-    name: 'howItWorks',
-    component: () => import('../views/howItWorks.vue'),
-    meta: {
-      customUpperFooter: 'about'
-    }
-  },
-  {
-    path: '/contact',
-    alias: ["/contact-us"],
-    name: 'contact',
-    component: () => import('../views/contact.vue'),
-    meta: {
-      customUpperFooter: 'about'
-    }
-  },
-  {
-    path: '/csr',
-    name: 'csr',
-    component: () => import('../views/Csr.vue'),
-    meta: {
-      customUpperFooter: 'about'
-    },
-  },
-  {
-    path: '/car-valuation',
-    name: 'carValuation',
-    component: () => import('../views/carValuation.vue')
-  },
-  {
-    path: '/electric-vehicle',
-    name: 'ev',
-    alias: ['/ev', '/electric-vehicles'],
-    component: () => import('../views/Csr.vue'),
-    meta: {
-      customUpperFooter: 'about'
-    }
-  },
-  {
-    path: '/customer-reviews',
-    name: 'customerReview',
-    alias: ['/customer-review', '/reviews'],
-    component: () => import('../views/reviews.vue'),
-    meta: {
-      customUpperFooter: 'about'
-    }
-  },
-  {
-    path: '/privacy-policy',
-    name: 'privacyPolicy',
-    alias: ['/customer-review', '/reviews'],
-    component: () => import('../views/privacyPolicy.vue')
-  },
-  {
-    path: '/do-not-sell-my-info',
-    name: 'dpNotSellMyInfo',
-    component: () => import('../components/404.vue'),
-    meta: {
-      pending: true
-    }
-  },
-  {
-    path: '/investor-relation',
-    name: 'investorRelation',
-    component: () => import('../components/404.vue'),
-    meta: {
-      pending: true
-    }
-  },
-  {
-    path: '/faq',
-    name: 'faq',
-    component: () => import('../components/404.vue'),
-    meta: {
-      pending: true
-    }
-  },
-  {
-    path: '*',
-    name: '404',
-    component: () => import('../components/404.vue')
-  }
-]
+	{
+		path: "/",
+		name: "Home",
+		component: () => import("../views/Home/"),
+	},
+	{
+		path: "/about",
+		name: "About",
+		alias: ["/about-us"],
+		// route level code-splitting
+		// this generates a separate chunk (about.[hash].js) for this route
+		// which is lazy-loaded when the route is visited.
+		component: () =>
+			import(/* webpackChunkName: "about" */ "../views/About.vue"),
+	},
+	{
+		path: "/sell",
+		name: "Finance",
+		component: () => import("../views/sell.vue"),
+	},
+	{
+		path: "/finance",
+		name: "finance",
+		component: () => import("../views/finance.vue"),
+		meta: {
+			customUpperFooter: "about",
+		},
+	},
+	{
+		path: "/protection",
+		name: "protection",
+		component: () => import("../views/protection.vue"),
+	},
+	{
+		path: "/how-it-works",
+		name: "howItWorks",
+		component: () => import("../views/howItWorks.vue"),
+		meta: {
+			customUpperFooter: "about",
+		},
+	},
+	{
+		path: "/contact",
+		alias: ["/contact-us"],
+		name: "contact",
+		component: () => import("../views/contact.vue"),
+		meta: {
+			customUpperFooter: "about",
+		},
+	},
+	{
+		path: "/csr",
+		name: "csr",
+		component: () => import("../views/Csr.vue"),
+		meta: {
+			customUpperFooter: "about",
+		},
+	},
+	{
+		path: "/car-valuation",
+		name: "carValuation",
+		component: () => import("../views/carValuation.vue"),
+	},
+	{
+		path: "/electric-vehicle",
+		name: "ev",
+		alias: ["/ev", "/electric-vehicles"],
+		component: () => import("../views/Csr.vue"),
+		meta: {
+			customUpperFooter: "about",
+		},
+	},
+	{
+		path: "/customer-reviews",
+		name: "customerReview",
+		alias: ["/customer-review", "/reviews"],
+		component: () => import("../views/reviews.vue"),
+		meta: {
+			customUpperFooter: "about",
+		},
+	},
+	{
+		path: "/privacy-policy",
+		name: "privacyPolicy",
+		alias: ["/customer-review", "/reviews"],
+		component: () => import("../views/privacyPolicy.vue"),
+	},
+	{
+		path: "/do-not-sell-my-info",
+		name: "donotsellmyinfo",
+		component: () => import("../views/donotsellmyinfo.vue"),
+		meta: {
+			pending: true,
+		},
+	},
+	{
+		path: "/investor-relation",
+		name: "investorRelation",
+		component: () => import("../components/404.vue"),
+		meta: {
+			pending: true,
+		},
+	},
+	{
+		path: "/faq",
+		name: "faq",
+		component: () => import("../views/faq.vue"),
+		meta: {
+			pending: true,
+		},
+	},
+	{
+		path: "*",
+		name: "404",
+		component: () => import("../components/404.vue"),
+	},
+];
 
 const router = new VueRouter({
   mode: 'history',
