@@ -74,9 +74,9 @@ export default {
           avatar: require('../assets/img/avatar.png'),
         },
         {
-          fullName: "Thomas Bridges",
+          fullName: "Promise Benson",
           position: "CEO / Co-Founder",
-          about: "Thomas Bridges is an accomplished CEO and the co-founder of Hermesautos, a renowned automotive company. With a visionary approach and extensive industry expertise, Thomas has played a pivotal role in shaping the company's trajectory since its inception. His commitment to excellence and customer satisfaction has driven the company's success and earned it a reputation for delivering cutting-edge products and services. Under his guidance, Hermesautos continues to thrive as a driving force in the industry, setting new standards for quality and performance.",
+          about: "Promise Benson is an accomplished CEO and the co-founder of Hermesautos, a renowned automotive company. With a visionary approach and extensive industry expertise, Thomas has played a pivotal role in shaping the company's trajectory since its inception. His commitment to excellence and customer satisfaction has driven the company's success and earned it a reputation for delivering cutting-edge products and services. Under his guidance, Hermesautos continues to thrive as a driving force in the industry, setting new standards for quality and performance.",
           avatar: require('../assets/img/avatar.png'),
         }
       ]
