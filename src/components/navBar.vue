@@ -142,7 +142,7 @@ export default {
       ],
       navMenu: [
         {
-          title: "buy",
+          title: "shop",
           ext: true,
           path: "https://shop.hermesautos.com",
         },

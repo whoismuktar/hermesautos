@@ -141,10 +141,10 @@ export default {
   data() {
     return {
       menu1: {
-        title: "Buy",
+        title: "Shop",
         items: [
           {
-            title: "buy",
+            title: "Shop",
             ext: true,
             path: "https://shop.hermesautos.com",
           },
