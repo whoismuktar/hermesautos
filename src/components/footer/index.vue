@@ -171,7 +171,7 @@ export default {
           },
           {
             title: "investor relations",
-            path: "/investor-relation",
+            path: "/about",
           },
           {
             title: "CSR",
